@@ -1,0 +1,9 @@
+.wrapper {
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  left: calc(var(--rs-unit-x4) * -1);
+  transform: translateX(-100%);
+}

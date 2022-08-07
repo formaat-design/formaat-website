@@ -1,0 +1,26 @@
+{
+  "name": "next-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:theme": "reshaped theming --output themes",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reshaped": "./vendor/reshaped-react-v1.3.0.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "18.6.1",
+    "@types/react": "18.0.15",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "next-transpile-modules": "9.0.0",
+    "typescript": "4.7.4"
+  }
+}
