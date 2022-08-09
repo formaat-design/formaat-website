@@ -46,7 +46,7 @@ const data: Interview = {
       {
         question: "Is Primer available externally?",
         answer:
-          "It's open-sourced, yes. Its artifacts like code and Figma library are published publicly and then there is a sea of documents, like information about from our planning sessions, roadmap, etc, which stay private.",
+          "It's open-sourced, yes. Its artifacts like code and Figma library are published publicly and then there is a sea of documents, like information from our planning sessions, roadmap, etc, which stay private.",
       },
       {
         question:
