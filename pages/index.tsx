@@ -1,6 +1,14 @@
 import type { NextPage } from "next";
 import NextLink from "next/link";
-import { Text, Stack, Frame, Avatar, Actionable, Tooltip } from "reshaped";
+import {
+  Text,
+  Stack,
+  Frame,
+  Avatar,
+  Actionable,
+  Tooltip,
+  Hidden,
+} from "reshaped";
 
 const TwitterIcon = () => (
   <svg width="16" height="16" viewBox="0 0 800 800">
@@ -13,55 +21,68 @@ const TwitterIcon = () => (
 
 const Home: NextPage = () => {
   return (
-    <Frame height="100vh" align="center" justify="center">
-      <Stack gap={20}>
+    <Frame
+      height={{ s: "auto", m: "100vh" }}
+      padding={{ s: [20, 0], m: 0 }}
+      align="center"
+      justify="center"
+    >
+      <Stack gap={{ s: 15, m: 20 }}>
         <Frame maxWidth="860px">
-          <Stack gap={6}>
+          <Stack gap={{ s: 4, m: 6 }}>
             <Stack direction="row" gap={0} align="center">
-              <Stack direction="row" align="center" gap={2}>
+              <Stack
+                direction={{ s: "column-reverse", m: "row" }}
+                align={{ s: "start", m: "center" }}
+                gap={4}
+              >
                 <Text variant="display-2">Formaat is a tiny</Text>
-                <Tooltip
-                  text={
-                    <Stack direction="row" gap={1} align="center">
-                      <TwitterIcon />
-                      <Stack.Item>@blvdmitry</Stack.Item>
-                    </Stack>
-                  }
-                  position="top"
-                >
-                  {(attributes) => (
-                    <Actionable
-                      attributes={{ ...attributes, target: "_blank" }}
-                      href="https://twitter.com/blvdmitry"
-                    >
-                      <Avatar
-                        src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
-                        size={9}
-                      />
-                    </Actionable>
-                  )}
-                </Tooltip>
-                <Tooltip
-                  text={
-                    <Stack direction="row" gap={1} align="center">
-                      <TwitterIcon />
-                      <Stack.Item>@hi_drozdenko</Stack.Item>
-                    </Stack>
-                  }
-                  position="top"
-                >
-                  {(attributes) => (
-                    <Actionable
-                      attributes={{ ...attributes, target: "_blank" }}
-                      href="https://twitter.com/hi_drozdenko"
-                    >
-                      <Avatar
-                        src="https://pbs.twimg.com/profile_images/1458204799091019777/aoCTSxOa_400x400.jpg"
-                        size={9}
-                      />
-                    </Actionable>
-                  )}
-                </Tooltip>
+                <Stack gap={2} as="span" direction="row">
+                  <Tooltip
+                    text={
+                      <Stack direction="row" gap={1} align="center">
+                        <TwitterIcon />
+                        <Stack.Item>@blvdmitry</Stack.Item>
+                      </Stack>
+                    }
+                    position="top"
+                  >
+                    {(attributes) => (
+                      <Actionable
+                        borderRadius="inherit"
+                        attributes={{ ...attributes, target: "_blank" }}
+                        href="https://twitter.com/blvdmitry"
+                      >
+                        <Avatar
+                          src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
+                          size={9}
+                        />
+                      </Actionable>
+                    )}
+                  </Tooltip>
+                  <Tooltip
+                    text={
+                      <Stack direction="row" gap={1} align="center">
+                        <TwitterIcon />
+                        <Stack.Item>@hi_drozdenko</Stack.Item>
+                      </Stack>
+                    }
+                    position="top"
+                  >
+                    {(attributes) => (
+                      <Actionable
+                        borderRadius="inherit"
+                        attributes={{ ...attributes, target: "_blank" }}
+                        href="https://twitter.com/hi_drozdenko"
+                      >
+                        <Avatar
+                          src="https://pbs.twimg.com/profile_images/1458204799091019777/aoCTSxOa_400x400.jpg"
+                          size={9}
+                        />
+                      </Actionable>
+                    )}
+                  </Tooltip>
+                </Stack>
               </Stack>
               <Text variant="display-2">
                 design system studio <br />
@@ -69,14 +90,18 @@ const Home: NextPage = () => {
               </Text>
             </Stack>
             <Text variant="featured-1">
-              With more than a decade of experience each, <br />
+              With more than a decade of experience each,{" "}
+              <Hidden hide={{ s: true, m: false }}>
+                {(className) => <br className={className} />}
+              </Hidden>
               we explore how design systems will look tomorrow
             </Text>
           </Stack>
         </Frame>
-        <Stack direction="row" gap={8}>
-          <Stack.Item size={6}>
+        <Stack direction="row" gap={{ s: 4, l: 8 }}>
+          <Stack.Item size={{ s: 12, m: 6 }}>
             <Actionable
+              borderRadius="inherit"
               href="https://reshaped.so"
               attributes={{ target: "_blank" }}
             >
@@ -103,9 +128,9 @@ const Home: NextPage = () => {
               </Frame>
             </Actionable>
           </Stack.Item>
-          <Stack.Item size={6}>
+          <Stack.Item size={{ s: 12, m: 6 }}>
             <NextLink href="/interviews" passHref>
-              <Actionable>
+              <Actionable borderRadius="inherit">
                 <Frame
                   backgroundColor="neutral-faded"
                   borderRadius="large"

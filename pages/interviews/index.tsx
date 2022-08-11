@@ -28,7 +28,7 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
             <Stack.Item gap={20}>
               <Stack direction="row" align="stretch" gap={4}>
                 {data.map((item) => (
-                  <Stack.Item size={6} key={item.id}>
+                  <Stack.Item size={{ s: 12, m: 6 }} key={item.id}>
                     <InterviewCard data={item} />
                   </Stack.Item>
                 ))}

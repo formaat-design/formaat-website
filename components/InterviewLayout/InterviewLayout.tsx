@@ -11,7 +11,12 @@ const InterviewLayout = (props: T.Props) => {
   return (
     <Frame padding={[30, 0]}>
       <Stack gap={15}>
-        <Stack direction="row" gap={10} align="start" className={s.wrapper}>
+        <Stack
+          direction={{ s: "column", m: "row" }}
+          gap={{ s: 6, l: 10 }}
+          align="start"
+          className={s.wrapper}
+        >
           <Avatar
             src={data.interviewee.photoUrl}
             size={18}
@@ -39,8 +44,12 @@ const InterviewLayout = (props: T.Props) => {
               </Stack.Item>
             </Stack>
           </Stack.Item>
-          <Stack gap={0} align="end">
-            <Stack direction="row" align="center" gap={2}>
+          <Stack gap={0} align={{ s: "start", m: "end" }}>
+            <Stack
+              direction={{ s: "row-reverse", m: "row" }}
+              align="center"
+              gap={2}
+            >
               {data.company?.logo || data.system.logo ? (
                 <div
                   dangerouslySetInnerHTML={{
@@ -101,7 +110,7 @@ const InterviewLayout = (props: T.Props) => {
           <Text variant="title-2">Highlights</Text>
 
           {data.interview.highlights.map((item) => (
-            <Stack gap={3} direction="row">
+            <Stack gap={3} direction="row" key={item}>
               <Icon svg={IconLightbulb} size={5} />
               <Stack.Item grow>
                 <Text variant="body-1" color="neutral-faded">

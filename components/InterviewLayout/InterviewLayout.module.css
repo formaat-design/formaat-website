@@ -3,7 +3,13 @@
 }
 
 .avatar {
-  position: absolute;
-  left: calc(var(--rs-unit-x4) * -1);
-  transform: translateX(-100%);
+  margin-bottom: var(--rs-unit-x2);
+}
+
+@media (--rs-viewport-l) {
+  .avatar {
+    position: absolute;
+    left: calc(var(--rs-unit-x4) * -1);
+    transform: translateX(-100%);
+  }
 }

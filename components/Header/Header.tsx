@@ -31,7 +31,13 @@ const Header = () => {
             </Stack>
           )}
         </Stack.Item>
-        <Button variant="ghost">Contact us</Button>
+        <Button
+          variant="ghost"
+          href="mailto:hello@reshaped.so"
+          attributes={{ target: "_blank" }}
+        >
+          Contact us
+        </Button>
       </Stack>
     </Frame>
   );
