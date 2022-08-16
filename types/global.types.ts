@@ -3,10 +3,10 @@ export type Interview = {
   company?: {
     name: string;
     logo?: string;
+    logoUrl?: string;
   };
-  system: {
+  system?: {
     name: string;
-    logo?: string;
   };
   interviewee: {
     name: string;

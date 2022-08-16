@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { Card, Stack, Avatar, Text, Frame } from "reshaped";
+import { Card, Stack, Avatar, Text, Image } from "reshaped";
 import * as T from "./InterviewCard.types";
 
 const InterviewCard = (props: T.Props) => {
@@ -12,19 +12,24 @@ const InterviewCard = (props: T.Props) => {
           <Stack.Item grow>
             <Stack gap={2}>
               <Stack direction="row" gap={2} align="center">
-                {data.company?.logo || data.system.logo ? (
-                  <Frame
-                    align="start"
-                    attributes={{
-                      dangerouslySetInnerHTML: {
-                        __html: data.company?.logo || data.system.logo!,
-                      },
+                {data.company?.logo ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: data.company?.logo,
                     }}
                   />
                 ) : null}
+                {data.company?.logoUrl ? (
+                  <Image
+                    src={data.company.logoUrl}
+                    width="24px"
+                    height="24px"
+                  />
+                ) : null}
                 <Text variant="featured-3">
-                  {data.system.name}
-                  {data.company ? `, ${data.company.name}` : ""}
+                  {[data?.system?.name, data.company?.name]
+                    .filter(Boolean)
+                    .join(", ")}
                 </Text>
               </Stack>
               <Text color="neutral-faded" variant="body-1">

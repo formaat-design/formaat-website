@@ -52,7 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
     data.push(interviewData.default);
   }
 
-  console.log(data);
   return {
     props: {
       data: data.sort(() => (Math.random() > 0.5 ? 1 : -1)),

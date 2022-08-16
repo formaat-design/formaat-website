@@ -5,7 +5,7 @@ const config = {
     formaat: {
       fontFamily: {
         display: {
-          family: "Outfit, Arial, sans-serif",
+          family: "Cabin, Arial, sans-serif",
         },
       },
     },

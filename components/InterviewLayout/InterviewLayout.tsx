@@ -1,5 +1,14 @@
 import React from "react";
-import { Stack, Avatar, Text, Button, Frame, Divider, Icon } from "reshaped";
+import {
+  Stack,
+  Avatar,
+  Text,
+  Button,
+  Frame,
+  Divider,
+  Icon,
+  Image,
+} from "reshaped";
 import IconExternal from "../../icons/External";
 import IconLightbulb from "../../icons/Lightbulb";
 import * as T from "./InterviewLayout.types";
@@ -50,16 +59,20 @@ const InterviewLayout = (props: T.Props) => {
               align="center"
               gap={2}
             >
-              {data.company?.logo || data.system.logo ? (
+              {data.company?.logo ? (
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: data.company?.logo || data.system.logo!,
+                    __html: data.company?.logo,
                   }}
                 />
               ) : null}
+              {data.company?.logoUrl ? (
+                <Image src={data.company.logoUrl} width="24px" height="24px" />
+              ) : null}
               <Text variant="body-medium-1">
-                {data.system.name}
-                {data.company ? `, ${data.company.name}` : ""}
+                {[data?.system?.name, data.company?.name]
+                  .filter(Boolean)
+                  .join(", ")}
               </Text>
             </Stack>
 

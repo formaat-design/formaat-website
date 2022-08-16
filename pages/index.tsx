@@ -53,10 +53,7 @@ const Home: NextPage = () => {
                         attributes={{ ...attributes, target: "_blank" }}
                         href="https://twitter.com/blvdmitry"
                       >
-                        <Avatar
-                          src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
-                          size={9}
-                        />
+                        <Avatar src="/img/studio/avatar-dmitry.png" size={9} />
                       </Actionable>
                     )}
                   </Tooltip>
@@ -75,10 +72,7 @@ const Home: NextPage = () => {
                         attributes={{ ...attributes, target: "_blank" }}
                         href="https://twitter.com/hi_drozdenko"
                       >
-                        <Avatar
-                          src="https://pbs.twimg.com/profile_images/1458204799091019777/aoCTSxOa_400x400.jpg"
-                          size={9}
-                        />
+                        <Avatar src="/img/studio/avatar-oleksii.png" size={9} />
                       </Actionable>
                     )}
                   </Tooltip>
@@ -94,7 +88,7 @@ const Home: NextPage = () => {
               <Hidden hide={{ s: true, m: false }}>
                 {(className) => <br className={className} />}
               </Hidden>
-              we explore how design systems will look tomorrow
+              we explore how design systems will work tomorrow
             </Text>
           </Stack>
         </Frame>
@@ -112,10 +106,7 @@ const Home: NextPage = () => {
               >
                 <Stack gap={2}>
                   <Stack direction="row" gap={2} align="center">
-                    <Avatar
-                      src="https://reshaped.so/img/landing/pricing/library-avatar.svg"
-                      size={6}
-                    />
+                    <Avatar src="/img/studio/avatar-reshaped.svg" size={6} />
                     <Stack.Item grow>
                       <Text variant="featured-3">Reshaped</Text>
                     </Stack.Item>
