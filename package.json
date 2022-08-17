@@ -7,7 +7,10 @@
     "build": "next build",
     "build:theme": "reshaped theming --output themes",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:prod": "pm2 start --name formaat-website 'yarn start'",
+    "stop:prod": "pm2 delete formaat-website",
+    "restart:prod": "pm2 restart formaat-website"
   },
   "dependencies": {
     "next": "12.2.3",
