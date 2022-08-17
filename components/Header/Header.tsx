@@ -15,8 +15,8 @@ const Header = () => {
           {!isHomepage && (
             <Stack direction="row" gap={3} align="center" divided>
               <NextLink href="/" passHref>
-                <Actionable>
-                  <Avatar color="neutral" initials="" size={8} squared />
+                <Actionable borderRadius="inherit">
+                  <Avatar color="neutral" initials="F" size={8} squared />
                 </Actionable>
               </NextLink>
               {isInterviewsSubpage && (

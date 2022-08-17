@@ -11,11 +11,13 @@ import {
 } from "reshaped";
 import IconExternal from "../../icons/External";
 import IconLightbulb from "../../icons/Lightbulb";
+import InterviewCard from "../InterviewCard";
+import ProjectList from "../ProjectList";
 import * as T from "./InterviewLayout.types";
 import s from "./InterviewLayout.module.css";
 
 const InterviewLayout = (props: T.Props) => {
-  const { data } = props;
+  const { data, suggestedData } = props;
 
   return (
     <Frame padding={[30, 0]}>
@@ -32,7 +34,7 @@ const InterviewLayout = (props: T.Props) => {
             className={s.avatar}
           />
 
-          <Stack.Item grow>
+          <Stack.Item size={{ s: 12, l: 8 }}>
             <Stack gap={2}>
               <Text variant="title-1">{data.interviewee.name}</Text>
               <Text variant="body-1">{data.interviewee.bio}</Text>
@@ -53,33 +55,39 @@ const InterviewLayout = (props: T.Props) => {
               </Stack.Item>
             </Stack>
           </Stack.Item>
-          <Stack gap={0} align={{ s: "start", m: "end" }}>
-            <Stack
-              direction={{ s: "row-reverse", m: "row" }}
-              align="center"
-              gap={2}
-            >
-              {data.company?.logo ? (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: data.company?.logo,
-                  }}
-                />
-              ) : null}
-              {data.company?.logoUrl ? (
-                <Image src={data.company.logoUrl} width="24px" height="24px" />
-              ) : null}
-              <Text variant="body-medium-1">
-                {[data?.system?.name, data.company?.name]
-                  .filter(Boolean)
-                  .join(", ")}
+          <Stack.Item size={{ s: 12, l: 4 }}>
+            <Stack gap={0} align={{ s: "start", l: "end" }}>
+              <Stack
+                direction={{ s: "row-reverse", l: "row" }}
+                align="center"
+                gap={2}
+              >
+                {data.company?.logo ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: data.company?.logo,
+                    }}
+                  />
+                ) : null}
+                {data.company?.logoUrl ? (
+                  <Image
+                    src={data.company.logoUrl}
+                    width="24px"
+                    height="24px"
+                  />
+                ) : null}
+                <Text variant="body-medium-1">
+                  {[data?.system?.name, data.company?.name]
+                    .filter(Boolean)
+                    .join(", ")}
+                </Text>
+              </Stack>
+
+              <Text variant="caption-1" color="neutral-faded">
+                {data.interview.date}
               </Text>
             </Stack>
-
-            <Text variant="caption-1" color="neutral-faded">
-              {data.interview.date}
-            </Text>
-          </Stack>
+          </Stack.Item>
         </Stack>
 
         <Divider />
@@ -120,7 +128,7 @@ const InterviewLayout = (props: T.Props) => {
         <Divider />
 
         <Stack gap={6}>
-          <Text variant="title-2">Highlights</Text>
+          <Text variant="title-3">Highlights</Text>
 
           {data.interview.highlights.map((item) => (
             <Stack gap={3} direction="row" key={item}>
@@ -132,6 +140,23 @@ const InterviewLayout = (props: T.Props) => {
               </Stack.Item>
             </Stack>
           ))}
+        </Stack>
+
+        <Stack gap={6}>
+          <Text variant="title-3">More interviews</Text>
+
+          <Stack direction="row" align="stretch" gap={4}>
+            {suggestedData.map((itemData) => (
+              <Stack.Item size={{ s: 12, m: 6 }} key={itemData.id}>
+                <InterviewCard data={itemData} />
+              </Stack.Item>
+            ))}
+          </Stack>
+        </Stack>
+
+        <Stack gap={6}>
+          <Text variant="title-3">Other Formaat projects</Text>
+          <ProjectList hiddenProject="interviews" />
         </Stack>
       </Stack>
     </Frame>

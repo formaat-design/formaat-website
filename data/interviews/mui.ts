@@ -24,7 +24,7 @@ const data: Interview = {
   interview: {
     description:
       "MUI offers a comprehensive suite of UI tools to help you ship new features faster. It started with a React library implementing Material guidelines and now also provides additional libraries like unstyled base components.",
-    date: "Aug 9, 2022",
+    date: "2022-08-09",
     items: [
       {
         question:

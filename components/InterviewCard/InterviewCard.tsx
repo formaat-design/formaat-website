@@ -1,13 +1,15 @@
 import NextLink from "next/link";
 import { Card, Stack, Avatar, Text, Image } from "reshaped";
 import * as T from "./InterviewCard.types";
+import s from "./InterviewCard.module.css";
 
 const InterviewCard = (props: T.Props) => {
   const { data } = props;
+  const date = new Date(data.interview.date);
 
   return (
     <NextLink href={`/interviews/${data.id}`} passHref>
-      <Card attributes={{ style: { height: "100%" } }}>
+      <Card padding={6} className={s.card}>
         <Stack gap={6} height="100%">
           <Stack.Item grow>
             <Stack gap={2}>
@@ -40,7 +42,12 @@ const InterviewCard = (props: T.Props) => {
           <Stack direction="row" gap={2} align="center">
             <Avatar size={8} src={data.interviewee.photoUrl} />
             <Text variant="body-2" color="neutral-faded">
-              {data.interviewee.name} &middot; {data.interview.date}
+              {data.interviewee.name} &middot;{" "}
+              {date.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
             </Text>
           </Stack>
         </Stack>

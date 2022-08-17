@@ -17,11 +17,11 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
   return (
     <>
       <Frame maxWidth="720px" padding={[30, 0]}>
-        <Stack gap={6}>
+        <Stack gap={3}>
           <Text variant="display-3">Design system interviews</Text>
-          <Text variant="featured-1">
-            Collection of interviews with experts working on the best design
-            systems in the industry
+          <Text variant="featured-2">
+            A collection of interviews with the industry experts to help you
+            learn about how design systems are built and maintained at scale.
           </Text>
 
           {mounted && (
@@ -54,7 +54,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      data: data.sort(() => (Math.random() > 0.5 ? 1 : -1)),
+      data: data.sort((a, b) => {
+        const tsA = +new Date(a.interview.date);
+        const tsB = +new Date(b.interview.date);
+
+        return tsB - tsA;
+      }),
     },
   };
 };

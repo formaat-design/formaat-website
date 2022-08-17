@@ -5,8 +5,16 @@ import { GetStaticProps, NextPage } from "next";
 import InterviewLayout from "../../components/InterviewLayout";
 import type * as G from "../../types/global.types";
 
-const Route: NextPage<{ data: G.Interview }> = (props) => {
-  return <InterviewLayout data={props.data} />;
+const Route: NextPage<{
+  interview: G.Interview;
+  suggestedInterviews: G.Interview[];
+}> = (props) => {
+  return (
+    <InterviewLayout
+      data={props.interview}
+      suggestedData={props.suggestedInterviews}
+    />
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -20,12 +28,38 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context.params?.id;
-  const data = await import(`../../data/interviews/${id}`);
+  const interviewsDir = path.resolve(process.cwd(), "data/interviews");
+  const ids = fs.readdirSync(interviewsDir);
+  const currentId = context.params?.id;
+  const interviews: G.Interview[] = [];
+  const suggestedInterviews: G.Interview[] = [];
+  const interview = await import(`../../data/interviews/${currentId}`);
+
+  for (let id of ids) {
+    const interviewData = await import(`../../data/interviews/${id}`);
+
+    interviews.push(interviewData.default);
+  }
+
+  interviews.sort((a, b) => {
+    const tsA = +new Date(a.interview.date);
+    const tsB = +new Date(b.interview.date);
+    return tsB - tsA;
+  });
+
+  interviews.forEach((item, index) => {
+    if (item.id !== currentId) return;
+
+    const firstIndex = (index + 1) % interviews.length;
+    const secondIndex = (index + 2) % interviews.length;
+
+    suggestedInterviews.push(interviews[firstIndex], interviews[secondIndex]);
+  });
 
   return {
     props: {
-      data: data.default,
+      interview: interview.default,
+      suggestedInterviews,
     },
   };
 };

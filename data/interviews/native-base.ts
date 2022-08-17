@@ -31,7 +31,7 @@ const data: Interview = {
   interview: {
     description:
       "NativeBase is a utility-first component library to build consistent UI across Android, iOS and Web. NativeBase is built upon React Native and was one of the first UI libraries for it.",
-    date: "July 20, 2022",
+    date: "2022-07-20",
     items: [
       {
         question:

@@ -5,8 +5,11 @@ const config = {
     formaat: {
       fontFamily: {
         display: {
-          family: "Cabin, Arial, sans-serif",
+          family: "Work Sans, Arial, sans-serif",
         },
+        // body: {
+        //   family: "Work Sans, Arial, sans-serif",
+        // },
       },
     },
   },

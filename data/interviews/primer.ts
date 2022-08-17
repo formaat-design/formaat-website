@@ -35,7 +35,7 @@ const data: Interview = {
   interview: {
     description:
       "Primer is the design system powering Github products. It exists for more than 10 years now and it has gone a long way to scale from a css library to multi-framework solution.",
-    date: "July 27, 2022",
+    date: "2022-07-27",
     items: [
       {
         question:
