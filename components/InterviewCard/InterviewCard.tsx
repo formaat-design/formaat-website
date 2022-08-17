@@ -23,6 +23,7 @@ const InterviewCard = (props: T.Props) => {
                 ) : null}
                 {data.company?.logoUrl ? (
                   <Image
+                    alt={`${data.company.name} logotype`}
                     src={data.company.logoUrl}
                     width="24px"
                     height="24px"

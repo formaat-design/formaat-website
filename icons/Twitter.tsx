@@ -1,4 +1,4 @@
-export default () => (
+const TwitterIcon = () => (
   <svg width="16" height="16" viewBox="0 0 800 800">
     <path
       fill="currentColor"
@@ -6,3 +6,5 @@ export default () => (
     ></path>
   </svg>
 );
+
+export default TwitterIcon;
