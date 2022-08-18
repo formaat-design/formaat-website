@@ -7,7 +7,12 @@ import "../themes/formaat/theme.css";
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const title = "Formaat - Design system studio";
+
+  let title = "Formaat - Design system studio";
+  if (router.asPath.startsWith("/interviews")) {
+    title = "Design system interviews - Formaat";
+  }
+
   const description =
     "With more than a decade of experience each, we explore how design systems will work tomorrow";
 
