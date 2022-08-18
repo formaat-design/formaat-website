@@ -18,6 +18,7 @@ import s from "./InterviewLayout.module.css";
 
 const InterviewLayout = (props: T.Props) => {
   const { data, suggestedData } = props;
+  const date = new Date(data.interview.date);
 
   return (
     <Frame padding={[30, 0]}>
@@ -85,7 +86,11 @@ const InterviewLayout = (props: T.Props) => {
               </Stack>
 
               <Text variant="caption-1" color="neutral-faded">
-                {data.interview.date}
+                {date.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
               </Text>
             </Stack>
           </Stack.Item>

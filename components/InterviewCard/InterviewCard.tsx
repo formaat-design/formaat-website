@@ -9,7 +9,7 @@ const InterviewCard = (props: T.Props) => {
 
   return (
     <NextLink href={`/interviews/${data.id}`} passHref>
-      <Card padding={6} className={s.card}>
+      <Card padding={{ s: 4, m: 6 }} className={s.card}>
         <Stack gap={6} height="100%">
           <Stack.Item grow>
             <Stack gap={2}>

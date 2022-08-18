@@ -72,7 +72,7 @@ const data: Interview = {
         question:
           "How do you work, and how do you prioritize the requests in this setup?",
         answer: [
-          "At this point, new feature development is not the main priority right now, and most of our focus goes into interacting with our users and making sure they’re happy. For example, our last sprint was focused on performance enhancements. Along with that, we do general maintenance of the library, and it’s a part that goes forever. It means that people can get bored of it, so we keep shuffling people to let them work on new challenges.",
+          "At this point, new feature development is not the main priority, and most of our focus goes into interacting with our users and making sure they’re happy. For example, our last sprint was focused on performance enhancements. Along with that, we do general maintenance of the library, and it’s a part that goes forever. It means that people can get bored of it, so we keep shuffling people to let them work on new challenges.",
         ],
       },
       {
@@ -126,7 +126,7 @@ const data: Interview = {
         answer: [
           "I can talk about a specific technical issue we've faced in v2 of NativeBase. We tried to implement an API close to vanilla CSS in React Native, including how style cascades work on the web. So, for instance, if you're applying a style like font-family on the wrapper component, it would trickle down to every element inside it.",
           "Once the engine for the feature was built, the runtime overhead of calculating all those styles was huge since we were running this operation for every single element on the screen, and performance dropped severely.",
-          "We have fixed this issue in v3 and realized how people around us were talking about how CSS cascading effect doesn't apply smoothly to native code. To fix this, we had to rewrite our styling model, and we've moved most of the style computations to the build time.",
+          "We have fixed this issue in v3 and at the same time realized how people around us were already talking about how CSS cascading effect doesn't apply smoothly to native code. To fix this, we had to rewrite our styling model, and we've moved most of the style computations to the build time.",
         ],
       },
       {

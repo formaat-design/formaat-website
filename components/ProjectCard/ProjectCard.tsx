@@ -13,7 +13,7 @@ const ProjectCard = (props: T.Props) => {
       href={href}
       attributes={isExternal ? { target: "_blank" } : undefined}
       onClick={onClick}
-      padding={6}
+      padding={{ s: 4, m: 6 }}
     >
       <Stack gap={2}>
         <Stack direction="row" gap={2} align="center">

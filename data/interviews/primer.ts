@@ -20,7 +20,7 @@ const data: Interview = {
   interviewee: {
     name: "Siddharth Kshetrapal",
     photoUrl: "/img/interviews/primer/avatar.png",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    bio: "Bio placeholder",
     links: [
       {
         label: "@siddharthkp",
@@ -116,9 +116,9 @@ const data: Interview = {
       },
       {
         question:
-          "Definitely, I’ve seen this trajectory for any engineering and designer roles as well. What do you think in general about growing within design system teams to Staff+ roles?",
+          "Definitely, I’ve seen this trajectory for any engineering and designer roles as well. What do you think in general about growing within design system teams to staff+ roles?",
         answer: [
-          "We have a few staff engineers in our team and I’ve seen people getting promoted to staff design positions in the design system area as well. I find it tricky be an engineer in the design org though because it changes the people you’re sitting in the room with.",
+          "We have a few staff engineers in our team and I’ve seen people getting promoted to staff design positions in the design system area as well. I find it tricky to be an engineer in the design org though because it changes the people you’re sitting in the room with.",
           "Since it’s design engineering, you’re a part of the design org but you’re still working with the engineering IC (individual contributors) track and their ways of measuring your performance. I haven’t seen enough people to go through a promotion cycle in this environment yet but the experience can be different based on the people making the decision. If there is not enough engineers on the promotion panel, it’s hard for them to relate to the work you’re doing. On the other hand, it’s good to have design represantatives there when you’re work is design or accessibility oriented.",
           "For example, I’m reporting to the director of design engineering and she reports to the head of design. So you kind of need a healthy mix of roles to make this work.",
         ],
@@ -142,7 +142,7 @@ const data: Interview = {
       },
       {
         question:
-          "What’s the hardest thing the team has working on so far? Maybe something not so common in the design system area?",
+          "What’s the hardest thing the team has working on so far in your opinion?",
         answer: [
           "I wasn’t there when the project started, but I think that was the release of dark mode at Github because we had to rethink how CSS gets shipped and how we treat design tokens. What helped us is that at that time CSS variables were available in all browsers we’re supporting. Still it was a complete re-architecture of our CSS and it took us 1.5 years to complete the project, including the product migration. That’s way longer that anyone could estimate originally.",
           "As for me personally, I spend a lot of time working on accessibility and it’s very challenging to handle all the small behavior edge cases. For example, I’m working on the menus and when you navigate to the menu through keyboard – where should the focus go? It’s easy to understand that in a Storybook environment but the moment I start integrating it with the product – I see so many edge cases and places where something is already built on top of the current menu implementation.",
@@ -153,7 +153,7 @@ const data: Interview = {
         question:
           "What do you think was the biggest mistake that was made during the Primer development?",
         answer: [
-          "I’ve been contributing long enough to see consequences of my actions so that’s a hard question. But I think one topic related to this is about the guidelines for building your own components. When building design systems for the first time we’re usually naive that system could include all UI components but you’ll always need more components in the product so you would rather focus on exting or composing them.",
+          "I’ve been contributing long enough to see consequences of my actions so that’s a hard question. But I think one topic related to this is about the guidelines for building your own components. When building design systems for the first time we’re usually naive that system could include all UI components but you’ll always need more components in the product so you would rather focus on extending or composing them.",
           "Since we were using styled components, everyone would just build custom components using this styling approach and now we can’t switch it out because of the amount of layers built on top of each other.",
           "I think we could be in a better place now if we would have started with a recommended way to build components and kind of own the styling layer not only for components but also for the product.",
         ],
@@ -162,7 +162,7 @@ const data: Interview = {
         question: "What do you think is the most positive quality of the team?",
         answer: [
           "For me that’s definitely the team as they’re all cross discipline. Everyone is a bit of a designer and a bit of an engineer. Each person has their own specialisation but there is a lot of overlap. We never had conversations where engineer would mention something and designers wouldn’t get it.",
-          "At the same time people on the team understand our scope really well. We can’t move fast and break things. Our team has to be intentionally slow, sleep about things for a while, sleep on it and then decide. And the whole team likes this way of working.",
+          "At the same time people on the team understand our scope really well. We can’t move fast and break things. Our team has to be intentionally slow, think about the changes for a while, sleep on it and then decide. And the whole team likes this way of working.",
           "Both of these make working in the team much more enjoyable. Even though it takes longer for us to go through the implementation and ship features, I think the end result has a higher quality.",
         ],
       },

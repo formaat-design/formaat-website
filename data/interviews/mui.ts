@@ -9,7 +9,7 @@ const data: Interview = {
   interviewee: {
     name: "Marija Najdova",
     photoUrl: "/img/interviews/mui/avatar.png",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    bio: "Bio placeholder",
     links: [
       {
         label: "@marijanajdova",
@@ -30,7 +30,7 @@ const data: Interview = {
         question:
           "What’s your current title, and what’s your role in the design systems development?",
         answer: [
-          "I'm the team lead of the Core team at MUI. The Core team is responsible for the open-source MIT core projects we have, the most popular one being Material UI. At the same time, we have other streams ongoing, like MUI Base, which is a set of headless hooks and unstyled components. This library doesn't have any opinion on how you build the design system. And we also have Joy UI, an alternative to Material UI for people who do not want to depend on Material Design. It is built on top of the headless hooks that MUI Base provides.",
+          "I'm the team lead of the Core team at MUI. The Core team is responsible for the open-source MIT core projects we have, the most popular one being Material UI. At the same time, we have other streams ongoing, like MUI Base, which is a set of headless hooks and unstyled components. This library doesn't have any opinion on how you build the design system. And we also have Joy UI, an alternative to Material UI for people who do not want to depend on Material Design.",
           "My role is more or less overlooking all of these parts and making sure that we’re on track. When necessary, I am also helping with the implementation and making decisions when multiple options are on the table for solving some specific problem.",
         ],
       },
@@ -90,7 +90,7 @@ const data: Interview = {
           "Since the community is driving the development in some way, how do you approach the governance of your projects? How do you know that community requests don’t conflict with the overall vision for the system?",
         answer: [
           "That’s an interesting question. First of all, the difference in the number of requests is quite significant if you compare it with the team size. Sometimes it’s even hard to respond to everyone. To improve this, we have a schedule where each person is responsible for the community for one week every month. The person working on the support is triaging the issues or reviewing them with the community, and then they can purely focus on craft for the next three weeks. They also don’t work on solving the issues immediately during the triage. They only need to validate it and assign it to the correct team member.",
-          "As for the priorities and potential conflicts, we keep some of the reported issues on hold to see how the community reacts, even though we don't necessarily agree with the initial request. You can have an opinion on how some issue or feature is not important, but if thousand people ask for it – you're probably wrong.",
+          "As for the priorities and potential conflicts, we keep some of the reported issues on hold to see how the community reacts, even though we might not necessarily agree with the initial request. You can have an opinion on how some issue or feature is not important, but if thousand people ask for it – you're probably wrong.",
         ],
       },
       {
