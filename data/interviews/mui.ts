@@ -9,7 +9,7 @@ const data: Interview = {
   interviewee: {
     name: "Marija Najdova",
     photoUrl: "/img/interviews/mui/avatar.png",
-    bio: "Bio placeholder",
+    bio: "Marija is part of the Core team at MUI, contributing to libraries that in total have more than 14M downloads monthly. She is passionate about design systems and the workflows around them. She spends her time building tools for developers that aim to help create UIs faster and more consistently. Recently, she's focused on helping developers grow and reach their full potential through great leadership.",
     links: [
       {
         label: "@marijanajdova",
@@ -119,7 +119,7 @@ const data: Interview = {
         question:
           "Getting back to the craft related topics, what do you think are the common complex topics for the UI libraries?",
         answer: [
-          "A common challenge for UI libraries is deciding what should go into the library and what should be implemented by its users. We might be making a trade-off here, but if you implement a feature that just one person needs, you still bundle it for all your users. And in our case, that's millions of people. Another challenge for us is the system's general code quality and maturity. With a lot of people using it – it has become one of the most important things we can offer.",
+          "A common challenge for UI libraries is deciding what should go into the library and what should be implemented by its users. We might be making a trade-off here, but if you implement a feature that just one person needs, you still bundle it for all your users. And in our case, that's millions of people. One of the benefits of Material UI is the system's general code quality and maturity. With a lot of people using it – it has become one of the most important things we can offer.",
         ],
       },
       {

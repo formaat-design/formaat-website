@@ -20,7 +20,7 @@ const data: Interview = {
   interviewee: {
     name: "Siddharth Kshetrapal",
     photoUrl: "/img/interviews/primer/avatar.png",
-    bio: "Bio placeholder",
+    bio: "Sid is a software engineer working on design systems at Github. In the past, he worked on UI and Design Systems at CodeSandbox, Auth0 and Practo. He’s the author of packages like ui-devtools, bundlesize and react-ui. He loves talking about design, performance and open source.",
     links: [
       {
         label: "@siddharthkp",

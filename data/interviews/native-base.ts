@@ -165,7 +165,6 @@ const data: Interview = {
       },
     ],
     highlights: [
-      "Growing people within this team is problematic because it's focused on a small piece of the company's overall focus. For example, people working in the NativeBase team wouldn't have enough exposure to topics like state management or handling API calls.",
       "Since we’re building across platforms, we couldn’t just implement the UI library. Instead, we had to go deeper and create a cross-platform accessibility library to handle all the complexity of working with components.",
       "Besides local communities, we connected to many people we would’ve never met otherwise. I think that’s the magic of the technology that connects people because we’ve all picked the same tech stack.",
     ],
