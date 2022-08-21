@@ -30,7 +30,7 @@ const data: Interview = {
         question:
           "What’s your current title, and what’s your role in the design systems development?",
         answer: [
-          "I'm the team lead of the Core team at MUI. The Core team is responsible for the open-source MIT core projects we have, the most popular one being Material UI. At the same time, we have other streams ongoing, like MUI Base, which is a set of headless hooks and unstyled components. This library doesn't have any opinion on how you build the design system. And we also have Joy UI, an alternative to Material UI for people who do not want to depend on Material Design.",
+          "I'm a team lead (engineering manager) of the core team at MUI. The core team is responsible for the MUI Core product line, all are open-source MIT projects, the most popular one being Material UI. At the same time, we have other streams ongoing, like MUI Base, which is a set of headless hooks and unstyled components. This library doesn't have any opinion on how you build the design system. And we also have Joy UI, an alternative to Material UI for people who do not want to depend on Material Design.",
           "My role is more or less overlooking all of these parts and making sure that we’re on track. When necessary, I am also helping with the implementation and making decisions when multiple options are on the table for solving some specific problem.",
         ],
       },
@@ -39,16 +39,16 @@ const data: Interview = {
           "Sounds pretty cool! And how long does MUI exist, and do the libraries you’ve mentioned depend on each other?",
         answer: [
           "The original project (Material UI) was initially started in 2014. Regarding the dependencies between the packages, Joy UI is built using the headless hooks from MUI Base, while Material UI's components use custom implementation. In the future, we plan to migrate Material UI to also use the headless hooks from MUI Base, but we are waiting for it to become more stable.",
-          "At this moment, we're focused strictly on React. We don't work on native components and currently don't plan to support other frameworks.",
+          "At this moment, we're focused strictly on React. We don't work on react native components and currently don't plan to support other frameworks.",
         ],
       },
       {
         question:
           "Now that we know your scope let’s talk about the team that maintains the libraries. How large is the team, and what is its composition?",
         answer: [
-          "The team size of the core library right now is 4 developers, including me, but I’m not playing the developer role 100% of the time. Then we have a designer and a developer experience engineer, who helps out with the documentation, promotion of the packages, etc.",
+          "The team size of the core library right now is 4 developers, including me, but I’m not playing the developer role 100% of the time. Then we have one designer and one developer experience engineer, who helps out with the documentation, promotion of the packages, etc.",
           "Regarding the general team's structure, we have one lead for each ongoing effort, but teams might differ. For example, MUI Base has one developer driving most of the development. So we're currently looking for extra developers who can help him with building out the library and someone who can help with the design execution for the libraries.",
-          "That might include helping with designing small details of the components to improve their UX and documentation. For example, displaying components from the Base library doesn’t make sense since it’s just browser native elements. So we need someone to cover that gap with great design examples, attractive demos, and custom design system elements. That should help others understand that they can build custom experiences not provided by Material or Joy UI.",
+          "That might include helping with designing small details of the components to improve their UX and documentation. For example, displaying components from the Base library doesn’t make sense since it’s just browser native elements. So we need someone to cover that gap with great design examples, attractive demos, and custom design system elements. hat should help others understand that they can build custom experiences not provided by Material UI or Joy UI.",
         ],
       },
       {
