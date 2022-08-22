@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Basier";
+  src: url("/fonts/basier-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Basier";
+  font-weight: 700;
+  src: url("/fonts/basier-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Basier";
+  font-weight: 500;
+  src: url("/fonts/basier-semibold.woff") format("woff");
+}
+
+body {
+  background: var(--rs-color-background-page-faded);
+}

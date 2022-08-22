@@ -52,7 +52,7 @@ const data: Interview = {
         question:
           "How long does Primer exist for? When did the team start building it? ",
         answer:
-          "It was before I joined so let me look it up. It was June 15, 2012. I haven’t realized it was its 10th birthday! ",
+          "It was created before I joined so let me look it up. It was June 15, 2012. I haven’t realized it was its 10th birthday! ",
       },
       {
         question:

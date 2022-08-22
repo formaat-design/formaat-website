@@ -1,0 +1,60 @@
+
+			[data-rs-theme="prose-light"], [data-rs-theme="prose-dark"] {
+					--rs-font-size-body-strong-1: 18px;
+--rs-line-height-body-strong-1: 28px;
+--rs-font-family-body-strong-1: var(--rs-font-family-body);
+--rs-font-weight-body-strong-1: var(--rs-font-weight-bold);
+--rs-font-size-body-strong-1-m: 18px;
+--rs-line-height-body-strong-1-m: 28px;
+--rs-font-family-body-strong-1-m: var(--rs-font-family-body);
+--rs-font-weight-body-strong-1-m: var(--rs-font-weight-bold);
+--rs-font-size-body-strong-1-l: 18px;
+--rs-line-height-body-strong-1-l: 28px;
+--rs-font-family-body-strong-1-l: var(--rs-font-family-body);
+--rs-font-weight-body-strong-1-l: var(--rs-font-weight-bold);
+--rs-font-size-body-strong-1-xl: 18px;
+--rs-line-height-body-strong-1-xl: 28px;
+--rs-font-family-body-strong-1-xl: var(--rs-font-family-body);
+--rs-font-weight-body-strong-1-xl: var(--rs-font-weight-bold);
+--rs-font-size-body-medium-1: 18px;
+--rs-line-height-body-medium-1: 28px;
+--rs-font-family-body-medium-1: var(--rs-font-family-body);
+--rs-font-weight-body-medium-1: var(--rs-font-weight-medium);
+--rs-font-size-body-medium-1-m: 18px;
+--rs-line-height-body-medium-1-m: 28px;
+--rs-font-family-body-medium-1-m: var(--rs-font-family-body);
+--rs-font-weight-body-medium-1-m: var(--rs-font-weight-medium);
+--rs-font-size-body-medium-1-l: 18px;
+--rs-line-height-body-medium-1-l: 28px;
+--rs-font-family-body-medium-1-l: var(--rs-font-family-body);
+--rs-font-weight-body-medium-1-l: var(--rs-font-weight-medium);
+--rs-font-size-body-medium-1-xl: 18px;
+--rs-line-height-body-medium-1-xl: 28px;
+--rs-font-family-body-medium-1-xl: var(--rs-font-family-body);
+--rs-font-weight-body-medium-1-xl: var(--rs-font-weight-medium);
+--rs-font-size-body-1: 18px;
+--rs-line-height-body-1: 28px;
+--rs-font-family-body-1: var(--rs-font-family-body);
+--rs-font-weight-body-1: var(--rs-font-weight-regular);
+--rs-font-size-body-1-m: 18px;
+--rs-line-height-body-1-m: 28px;
+--rs-font-family-body-1-m: var(--rs-font-family-body);
+--rs-font-weight-body-1-m: var(--rs-font-weight-regular);
+--rs-font-size-body-1-l: 18px;
+--rs-line-height-body-1-l: 28px;
+--rs-font-family-body-1-l: var(--rs-font-family-body);
+--rs-font-weight-body-1-l: var(--rs-font-weight-regular);
+--rs-font-size-body-1-xl: 18px;
+--rs-line-height-body-1-xl: 28px;
+--rs-font-family-body-1-xl: var(--rs-font-family-body);
+--rs-font-weight-body-1-xl: var(--rs-font-weight-regular);
+			}
+		
+			[data-rs-theme="prose-light"] {
+					
+			}
+		
+			[data-rs-theme="prose-dark"] {
+					
+			}
+		

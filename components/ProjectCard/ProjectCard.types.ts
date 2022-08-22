@@ -3,8 +3,8 @@ import React from "react";
 export type Props = {
   title: string;
   description: string;
-  thumbnail?: React.ReactNode;
+  thumbnail: string;
+  alt: string;
   href?: string;
   onClick?: () => void;
-  className?: string;
 };

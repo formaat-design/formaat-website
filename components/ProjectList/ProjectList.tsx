@@ -1,51 +1,37 @@
 import React from "react";
-import NextLink from "next/link";
-import { Stack, Avatar } from "reshaped";
+import { Stack } from "reshaped";
 import ProjectCard from "../ProjectCard";
-import * as T from "./ProjectList.types";
-import s from "./ProjectList.module.css";
 
-const ProjectList = (props: T.Props) => {
-  const { hiddenProject } = props;
-
+const ProjectList = () => {
   return (
-    <Stack direction="row" gap={4} align="stretch">
-      {hiddenProject !== "reshaped" && (
-        <Stack.Item size={{ s: 12, m: 6 }}>
-          <ProjectCard
-            className={s.card}
-            title="Reshaped"
-            description="Professionally crafted design system for everyday product development with Figma and React"
-            thumbnail={
-              <Avatar src="/img/studio/avatar-reshaped.svg" size={6} />
-            }
-            href="https://reshaped.so"
-          />
-        </Stack.Item>
-      )}
-
-      {hiddenProject !== "interviews" && (
-        <Stack.Item size={{ s: 12, m: 6 }}>
-          <NextLink href="/interviews" passHref>
-            <ProjectCard
-              className={s.card}
-              title="🎙️ Design system interviews"
-              description="Professionally crafted design system for everyday product development with Figma and React"
-            />
-          </NextLink>
-        </Stack.Item>
-      )}
-
-      {hiddenProject !== "checklist" && (
-        <Stack.Item size={{ s: 12, m: 6 }}>
-          <ProjectCard
-            className={s.card}
-            title="Design system checklist"
-            description="An open-source checklist to help you plan, build and grow your design system"
-            href="https://www.designsystemchecklist.com/"
-          />
-        </Stack.Item>
-      )}
+    <Stack direction="row" gap={6}>
+      <Stack.Item size={{ s: 12, m: 4 }}>
+        <ProjectCard
+          href="https://reshaped.so"
+          title="Reshaped"
+          description="Design system built for your scale in React & Figma"
+          thumbnail="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+          alt="Reshaped components preview"
+        />
+      </Stack.Item>
+      <Stack.Item size={{ s: 12, m: 4 }}>
+        <ProjectCard
+          href="https://www.figma.com/community/plugin/1132648122057236517/Reshaped"
+          title="Reshaped tokens"
+          description="Free Figma plugin to manage themes and dark mode"
+          thumbnail="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+          alt="Figma plugin interface"
+        />
+      </Stack.Item>
+      <Stack.Item size={{ s: 12, m: 4 }}>
+        <ProjectCard
+          href="https://designsystemchecklist.com"
+          title="Design system checklist"
+          description="An open-source checklist to help you plan, build and grow your design system"
+          thumbnail="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+          alt="Checklist interface"
+        />
+      </Stack.Item>
     </Stack>
   );
 };

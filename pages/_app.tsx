@@ -1,20 +1,30 @@
+import React from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import ReactGA from "react-ga4";
 import { Reshaped, Container, Stack } from "reshaped";
 import Header from "../components/Header";
 import "../themes/formaat/theme.css";
+import "../themes/fragments/prose/theme.css";
+import "./app.css";
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const isIndex = router.asPath === "/";
+  const isInterviews = router.asPath.startsWith("/interviews");
 
   let title = "Formaat - Design system studio";
-  if (router.asPath.startsWith("/interviews")) {
+  if (isInterviews) {
     title = "Design system interviews - Formaat";
   }
 
   const description =
     "With more than a decade of experience each, we explore how design systems will work tomorrow";
+
+  React.useEffect(() => {
+    ReactGA.initialize("G-XS7B3DPWDT");
+  }, []);
 
   return (
     <>
@@ -59,7 +69,7 @@ function App({ Component, pageProps }: AppProps) {
 
       <Reshaped theme="formaat" defaultColorMode="dark">
         <Header />
-        <Container width="780px">
+        <Container width={isIndex ? "1120px" : "780px"}>
           <Stack gap={10}>
             <Component {...pageProps} />
           </Stack>

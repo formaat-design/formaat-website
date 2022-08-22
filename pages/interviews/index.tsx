@@ -1,9 +1,8 @@
 import React from "react";
 import type { NextPage, GetStaticProps } from "next";
-import path from "path";
-import fs from "fs";
 import { Text, Stack, Frame } from "reshaped";
 import InterviewCard from "../../components/InterviewCard";
+import { getInterviews } from "../../utilities/data";
 import type * as G from "../../types/global.types";
 
 const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
@@ -26,11 +25,9 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
 
           {mounted && (
             <Stack.Item gap={20}>
-              <Stack direction="row" align="stretch" gap={4}>
+              <Stack gap={4}>
                 {data.map((item) => (
-                  <Stack.Item size={{ s: 12, m: 6 }} key={item.id}>
-                    <InterviewCard data={item} />
-                  </Stack.Item>
+                  <InterviewCard data={item} key={item.id} />
                 ))}
               </Stack>
             </Stack.Item>
@@ -42,24 +39,11 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const interviewsDir = path.resolve(process.cwd(), "data/interviews");
-  const ids = fs.readdirSync(interviewsDir);
-
-  const data: G.Interview[] = [];
-
-  for (let id of ids) {
-    const interviewData = await import(`../../data/interviews/${id}`);
-    data.push(interviewData.default);
-  }
+  const interviews = await getInterviews();
 
   return {
     props: {
-      data: data.sort((a, b) => {
-        const tsA = +new Date(a.interview.date);
-        const tsB = +new Date(b.interview.date);
-
-        return tsB - tsA;
-      }),
+      data: interviews,
     },
   };
 };

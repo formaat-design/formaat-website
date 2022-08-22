@@ -1,35 +1,31 @@
 import React from "react";
-import { Card, Stack, Text, Icon } from "reshaped";
-import ExternalIcon from "../../icons/External";
+import { Stack, Text, Actionable, Image } from "reshaped";
 import * as T from "./ProjectCard.types";
 
 const ProjectCard = (props: T.Props) => {
-  const { title, description, thumbnail, href, onClick, className } = props;
-  const isExternal = href && !onClick;
+  const { title, description, thumbnail, alt, href, onClick } = props;
 
   return (
-    <Card
-      className={className}
+    <Actionable
       href={href}
-      attributes={isExternal ? { target: "_blank" } : undefined}
       onClick={onClick}
-      padding={{ s: 4, m: 6 }}
+      attributes={href ? { target: "_blank" } : undefined}
     >
-      <Stack gap={2}>
-        <Stack direction="row" gap={2} align="center">
-          {thumbnail}
-          <Stack.Item grow>
-            <Text variant="featured-3">{title}</Text>
-          </Stack.Item>
-          {isExternal && (
-            <Icon svg={ExternalIcon} size={4} color="neutral-faded" />
-          )}
-        </Stack>
-        <Text variant="body-1" color="neutral-faded">
-          {description}
-        </Text>
+      <Stack gap={4} direction={{ s: "row", m: "column" }}>
+        <Image
+          borderRadius="medium"
+          src={thumbnail}
+          alt={alt}
+          width={{ s: "100px", m: "100%" }}
+        />
+        <Stack.Item grow>
+          <Stack gap={1}>
+            <Text variant="body-medium-1">{title}</Text>
+            <Text color="neutral-faded">{description}</Text>
+          </Stack>
+        </Stack.Item>
       </Stack>
-    </Card>
+    </Actionable>
   );
 };
 

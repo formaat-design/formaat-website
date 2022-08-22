@@ -38,7 +38,9 @@ const data: Interview = {
           "How did you start with the UI development and what’s your current role in the design systems industry?",
         answer: [
           "I was lucky in life that I started very early with coding and a bit of design. My first computer language was QBasic. Back then, we had an early version of Photoshop and CorelDraw, and there I was on the overlap of design and code. Right after I graduated in 2011 as an engineer, I started a product studio called GeekyAnts.",
-          "We are very active in the developer community of React, React Native, and sometimes Flutter. At the same time, we are doing a lot of UX/UI design using tools like Figma, and now we stand at the intersection of design and code. So it has a lot to do with design systems.",
+          "We are very active in the developer community of React, React Native, and sometimes Flutter. At the same time, we are doing a lot of UX/UI design using tools like Figma.",
+          "Now we stand at the intersection of design and code, which is a big part of design systems. We are currently building a design system for a popular leader in its industry. That is helping us explore fresh ideas and experiment.",
+          "We also believe that communities will play a major role in the maturing of the design system ecosystem. Our recent Design System meet-up was a start towards this direction. If we can achieve what we did for the React Native community, we will have something magical in our hands.",
         ],
       },
       {
@@ -65,7 +67,8 @@ const data: Interview = {
         question:
           "What are the current roles of the team working on the open-source part?",
         answer: [
-          "We have 2-3 developers working on the codebase full-time and ensuring all the issues are resolved. Apart from that, we have 1 designer and 1 architect who are involved part-time after the release of v3. They primarily ensure that all changes and merge requests follow our guidelines. And then we have someone responsible for building out the community as well because you can’t really run an open-sourced project without a community.",
+          "We have 2-3 developers working on the codebase full-time and ensuring all the issues are resolved. Apart from that, we have 1 designer and 1 architect who are involved part-time after the release of v3. They primarily ensure that all changes and merge requests follow our guidelines.",
+          "The team also makes sure that support queries on our Discord server get addressed in a small time window. And then we have someone responsible for building out the community as well. Because, what is an open-sourced project without a thriving community?",
         ],
       },
       {

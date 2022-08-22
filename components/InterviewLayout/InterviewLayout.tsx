@@ -8,6 +8,7 @@ import {
   Divider,
   Icon,
   Image,
+  ThemeProvider,
 } from "reshaped";
 import IconExternal from "../../icons/External";
 import IconLightbulb from "../../icons/Lightbulb";
@@ -21,7 +22,7 @@ const InterviewLayout = (props: T.Props) => {
   const date = new Date(data.interview.date);
 
   return (
-    <Frame padding={[30, 0]}>
+    <Frame padding={[20, 0]}>
       <Stack gap={15}>
         <Stack
           direction={{ s: "column", m: "row" }}
@@ -38,7 +39,9 @@ const InterviewLayout = (props: T.Props) => {
           <Stack.Item size={{ s: 12, l: 8 }}>
             <Stack gap={2}>
               <Text variant="title-1">{data.interviewee.name}</Text>
-              <Text variant="body-1">{data.interviewee.bio}</Text>
+              <Text variant="body-1" color="neutral-faded">
+                {data.interviewee.bio}
+              </Text>
               <Stack.Item gap={6}>
                 <Stack gap={2} direction="row">
                   {data.interviewee?.links?.map((link) => (
@@ -98,38 +101,42 @@ const InterviewLayout = (props: T.Props) => {
 
         <Divider />
 
-        {data.interview.items.map((item) => (
-          <Stack gap={5} key={item.question}>
-            <Text
-              variant="body-strong-1"
-              color="neutral-faded"
-              className={s.wrapper}
-            >
-              <Avatar
-                src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
-                size={6}
-                className={s.avatar}
-              />
-              {item.question}
-            </Text>
-            <Text variant="body-1" className={s.wrapper}>
-              <Avatar
-                src={data.interviewee.photoUrl}
-                size={6}
-                className={s.avatar}
-              />
-              <Stack as="span">
-                {Array.isArray(item.answer)
-                  ? item.answer.map((item) => (
-                      <Stack.Item as="p" key={item}>
-                        <span dangerouslySetInnerHTML={{ __html: item }} />
-                      </Stack.Item>
-                    ))
-                  : item.answer}
+        <ThemeProvider theme="prose">
+          <Stack gap={15}>
+            {data.interview.items.map((item) => (
+              <Stack gap={5} key={item.question}>
+                <Text variant="body-medium-1" className={s.wrapper}>
+                  <Avatar
+                    src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
+                    size={7}
+                    className={s.avatar}
+                  />
+                  {item.question}
+                </Text>
+                <Text
+                  variant="body-1"
+                  color="neutral-faded"
+                  className={s.wrapper}
+                >
+                  <Avatar
+                    src={data.interviewee.photoUrl}
+                    size={7}
+                    className={s.avatar}
+                  />
+                  <Stack as="span">
+                    {Array.isArray(item.answer)
+                      ? item.answer.map((item) => (
+                          <Stack.Item as="p" key={item}>
+                            <span dangerouslySetInnerHTML={{ __html: item }} />
+                          </Stack.Item>
+                        ))
+                      : item.answer}
+                  </Stack>
+                </Text>
               </Stack>
-            </Text>
+            ))}
           </Stack>
-        ))}
+        </ThemeProvider>
 
         <Divider />
 
@@ -138,7 +145,7 @@ const InterviewLayout = (props: T.Props) => {
 
           {data.interview.highlights.map((item) => (
             <Stack gap={3} direction="row" key={item}>
-              <Icon svg={IconLightbulb} size={5} />
+              <Icon svg={IconLightbulb} size={5} color="primary" />
               <Stack.Item grow>
                 <Text variant="body-1" color="neutral-faded">
                   {item}
@@ -148,10 +155,10 @@ const InterviewLayout = (props: T.Props) => {
           ))}
         </Stack>
 
-        <Stack gap={6}>
+        <Stack gap={4}>
           <Text variant="title-3">More interviews</Text>
 
-          <Stack direction="row" align="stretch" gap={4}>
+          <Stack direction="row" align="stretch" gap={10}>
             {suggestedData.map((itemData) => (
               <Stack.Item size={{ s: 12, m: 6 }} key={itemData.id}>
                 <InterviewCard data={itemData} />
@@ -162,7 +169,7 @@ const InterviewLayout = (props: T.Props) => {
 
         <Stack gap={6}>
           <Text variant="title-3">Other Formaat projects</Text>
-          <ProjectList hiddenProject="interviews" />
+          <ProjectList />
         </Stack>
       </Stack>
     </Frame>
