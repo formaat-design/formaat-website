@@ -82,7 +82,7 @@ const Home: NextPage<{ interviews: G.Interview[] }> = (props) => {
                 </Stack>
               </Stack>
               <Text variant="display-2">
-                design system studio
+                design system studio&nbsp;
                 <Hidden hide={{ s: true, m: false }}>
                   {(className) => <br className={className} />}
                 </Hidden>
