@@ -22,7 +22,7 @@ const InterviewLayout = (props: T.Props) => {
   const date = new Date(data.interview.date);
 
   return (
-    <Frame padding={[20, 0]}>
+    <Frame padding={{ s: [15, 0], l: [20, 0] }}>
       <Stack gap={15}>
         <Stack
           direction={{ s: "column", m: "row" }}
@@ -30,14 +30,13 @@ const InterviewLayout = (props: T.Props) => {
           align="start"
           className={s.wrapper}
         >
-          <Avatar
-            src={data.interviewee.photoUrl}
-            size={18}
-            className={s.avatar}
-          />
-
           <Stack.Item size={{ s: 12, l: 8 }}>
             <Stack gap={2}>
+              <Avatar
+                src={data.interviewee.photoUrl}
+                size={18}
+                className={s.avatar}
+              />
               <Text variant="title-1">{data.interviewee.name}</Text>
               <Text variant="body-1" color="neutral-faded">
                 {data.interviewee.bio}
