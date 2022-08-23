@@ -119,8 +119,9 @@ const Home: NextPage<{ interviews: G.Interview[] }> = (props) => {
             <Stack gap={3}>
               <Text variant="title-3">Design system interviews</Text>
               <Text variant="body-1">
-                Professionally crafted design system for everyday product
-                development with Figma and React
+                A collection of interviews with the industry experts to help you
+                learn about how design systems are built and maintained at
+                scale.
               </Text>
               <Stack.Item gap={7}>
                 <Stack gap={3} divided>
