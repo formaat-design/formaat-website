@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import NextLink from "next/link";
 import {
   Text,
   Stack,
@@ -7,6 +8,7 @@ import {
   Actionable,
   Tooltip,
   Hidden,
+  Link,
 } from "reshaped";
 import TwitterIcon from "../icons/Twitter";
 import InterviewCard from "../components/InterviewCard";
@@ -130,11 +132,9 @@ const Home: NextPage<{ interviews: G.Interview[] }> = (props) => {
                   ))}
                 </Stack>
               </Stack.Item>
-              {/* <Text variant="body-medium-2">
-                <NextLink href="/interviews" passHref>
-                  <Link variant="plain">See all interviews</Link>
-                </NextLink>
-              </Text> */}
+              <NextLink href="/interviews" passHref>
+                <Link variant="plain">See all interviews</Link>
+              </NextLink>
             </Stack>
           </Stack.Item>
         </Stack>

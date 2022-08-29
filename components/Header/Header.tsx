@@ -1,11 +1,20 @@
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { Actionable, Stack, Frame, Button, Text, Container } from "reshaped";
+import {
+  Actionable,
+  Stack,
+  Frame,
+  Button,
+  Text,
+  Container,
+  Link,
+  Hidden,
+} from "reshaped";
 
 const Header = () => {
   const { asPath } = useRouter();
   const isHomepage = asPath === "/";
-  // const isInterviewsSubpage = asPath.startsWith("/interviews/");
+  const isInterviewsSubpage = asPath.startsWith("/interviews/");
   const width = isHomepage ? 1120 : 780;
 
   return (
@@ -19,15 +28,17 @@ const Header = () => {
                   <Text variant="title-3">formaat</Text>
                 </Actionable>
               </NextLink>
-              {/* {isInterviewsSubpage && (
-                <Text variant="body-medium-2" color="neutral-faded">
-                  <NextLink href="/interviews" passHref>
-                    <Link variant="plain" color="inherit">
-                      Design system interviews
-                    </Link>
-                  </NextLink>{" "}
-                </Text>
-              )} */}
+              {isInterviewsSubpage && (
+                <Hidden hide={{ s: true, m: false }}>
+                  <Text variant="body-2" color="neutral-faded">
+                    <NextLink href="/interviews" passHref>
+                      <Link variant="plain" color="inherit">
+                        Design system interviews
+                      </Link>
+                    </NextLink>{" "}
+                  </Text>
+                </Hidden>
+              )}
             </Stack>
           </Stack.Item>
           <Button.Aligner position="end">

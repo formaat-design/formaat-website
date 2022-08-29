@@ -157,7 +157,7 @@ const InterviewLayout = (props: T.Props) => {
         <Stack gap={4}>
           <Text variant="title-3">More interviews</Text>
 
-          <Stack direction="row" align="stretch" gap={10}>
+          <Stack direction="row" align="stretch" gap={{ s: 4, m: 10 }}>
             {suggestedData.map((itemData) => (
               <Stack.Item size={{ s: 12, m: 6 }} key={itemData.id}>
                 <InterviewCard data={itemData} />

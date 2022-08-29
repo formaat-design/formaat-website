@@ -25,7 +25,7 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
 
           {mounted && (
             <Stack.Item gap={20}>
-              <Stack gap={4}>
+              <Stack gap={8}>
                 {data.map((item) => (
                   <InterviewCard data={item} key={item.id} />
                 ))}
