@@ -2,6 +2,7 @@ import React from "react";
 import type { NextPage, GetStaticProps } from "next";
 import { Text, Stack, Frame } from "reshaped";
 import InterviewCard from "../../components/InterviewCard";
+import Founders from "../../components/Founders";
 import { getInterviews } from "../../utilities/data";
 import type * as G from "../../types/global.types";
 
@@ -22,6 +23,13 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
             A collection of interviews with the industry experts to help you
             learn about how design systems are built and maintained at scale.
           </Text>
+
+          <Stack.Item gap={4}>
+            <Stack direction="row" align="center" gap={3}>
+              <Text variant="featured-2">Follow us for updates:</Text>
+              <Founders />
+            </Stack>
+          </Stack.Item>
 
           {mounted && (
             <Stack.Item gap={20}>

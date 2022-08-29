@@ -1,21 +1,11 @@
 import type { NextPage, GetStaticProps } from "next";
 import NextLink from "next/link";
-import {
-  Text,
-  Stack,
-  Frame,
-  Avatar,
-  Actionable,
-  Tooltip,
-  Hidden,
-  Link,
-} from "reshaped";
-import TwitterIcon from "../icons/Twitter";
+import { Text, Stack, Frame, Hidden, Link } from "reshaped";
+import Founders from "../components/Founders";
 import InterviewCard from "../components/InterviewCard";
 import ProjectList from "../components/ProjectList";
 import { getInterviews } from "../utilities/data";
 import * as G from "../types/global.types";
-import s from "./index.module.css";
 
 const Home: NextPage<{ interviews: G.Interview[] }> = (props) => {
   const { interviews } = props;
@@ -32,56 +22,7 @@ const Home: NextPage<{ interviews: G.Interview[] }> = (props) => {
                 gap={2}
               >
                 <Text variant="display-2">Formaat is a tiny</Text>
-                <Stack gap={0} as="span" direction="row">
-                  <Tooltip
-                    text={
-                      <Stack direction="row" gap={0} align="center">
-                        <TwitterIcon />
-                        <Stack.Item>@blvdmitry</Stack.Item>
-                      </Stack>
-                    }
-                    position="top"
-                  >
-                    {(attributes) => (
-                      <Actionable
-                        borderRadius="inherit"
-                        attributes={{ ...attributes, target: "_blank" }}
-                        href="https://twitter.com/blvdmitry"
-                        className={s.avatarWrapper}
-                      >
-                        <Avatar
-                          src="/img/studio/avatar-dmitry.png"
-                          size={14}
-                          className={s.avatar}
-                        />
-                      </Actionable>
-                    )}
-                  </Tooltip>
-                  <Tooltip
-                    text={
-                      <Stack direction="row" gap={0} align="center">
-                        <TwitterIcon />
-                        <Stack.Item>@hi_drozdenko</Stack.Item>
-                      </Stack>
-                    }
-                    position="top"
-                  >
-                    {(attributes) => (
-                      <Actionable
-                        borderRadius="inherit"
-                        attributes={{ ...attributes, target: "_blank" }}
-                        href="https://twitter.com/hi_drozdenko"
-                        className={s.avatarWrapper}
-                      >
-                        <Avatar
-                          className={s.avatar}
-                          src="/img/studio/avatar-oleksii.png"
-                          size={14}
-                        />
-                      </Actionable>
-                    )}
-                  </Tooltip>
-                </Stack>
+                <Founders />
               </Stack>
               <Text variant="display-2">
                 design system studio&nbsp;
