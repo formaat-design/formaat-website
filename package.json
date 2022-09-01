@@ -14,18 +14,18 @@
     "deploy": "git pull && yarn && yarn build && yarn restart:prod"
   },
   "dependencies": {
-    "next": "12.2.3",
+    "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-ga4": "1.4.1",
     "reshaped": "./vendor/reshaped-v1.4.0-beta.tgz"
   },
   "devDependencies": {
-    "@types/node": "18.6.1",
-    "@types/react": "18.0.15",
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3",
+    "@types/node": "18.7.14",
+    "@types/react": "18.0.18",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
     "next-transpile-modules": "9.0.0",
-    "typescript": "4.7.4"
+    "typescript": "4.8.2"
   }
 }
