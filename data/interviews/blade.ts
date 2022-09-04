@@ -24,7 +24,7 @@ const data: Interview = {
   interview: {
     description:
       "Blade is a cross-platform design system that powers Razorpay. All major features are implemented through API documents and decision logs to ensure the codebase works across React and React Native.",
-    date: "2022-08-29",
+    date: "2022-09-05",
     items: [
       {
         question:
