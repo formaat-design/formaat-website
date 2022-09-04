@@ -3,7 +3,7 @@ import type { Interview } from "../../types/global.types";
 const data: Interview = {
   id: "primer",
   company: {
-    name: "Github",
+    name: "GitHub",
     // Embedded logo to keep its color inherit color mode colors
     logo: `
       <svg viewBox="0 0 16 16" version="1.1" width="24" height="24" style="display: block">
@@ -20,7 +20,7 @@ const data: Interview = {
   interviewee: {
     name: "Siddharth Kshetrapal",
     photoUrl: "/img/interviews/primer/avatar.png",
-    bio: "Sid is a software engineer working on design systems at Github. In the past, he worked on UI and Design Systems at CodeSandbox, Auth0 and Practo. He’s the author of packages like ui-devtools, bundlesize and react-ui. He loves talking about design, performance and open source.",
+    bio: "Sid is a software engineer working on design systems at GitHub. In the past, he worked on UI and Design Systems at CodeSandbox, Auth0 and Practo. He’s the author of packages like ui-devtools, bundlesize and react-ui. He loves talking about design, performance and open source.",
     links: [
       {
         label: "@siddharthkp",
@@ -41,7 +41,7 @@ const data: Interview = {
         question:
           "Where do you currently work and what's your role in the team?",
         answer:
-          "My current title is senior software engineer in Github. I'm working on our design system called Primer in design engineering team. In the design org we have two teams working on the design system: design engineering and design infrastructure.",
+          "My current title is senior software engineer in GitHub. I'm working on our design system called Primer in design engineering team. In the design org we have two teams working on the design system: design engineering and design infrastructure.",
       },
       {
         question: "Is Primer available externally?",
@@ -144,7 +144,7 @@ const data: Interview = {
         question:
           "What’s the hardest thing the team has working on so far in your opinion?",
         answer: [
-          "I wasn’t there when the project started, but I think that was the release of dark mode at Github because we had to rethink how CSS gets shipped and how we treat design tokens. What helped us is that at that time CSS variables were available in all browsers we’re supporting. Still it was a complete re-architecture of our CSS and it took us 1.5 years to complete the project, including the product migration. That’s way longer that anyone could estimate originally.",
+          "I wasn’t there when the project started, but I think that was the release of dark mode at GitHub because we had to rethink how CSS gets shipped and how we treat design tokens. What helped us is that at that time CSS variables were available in all browsers we’re supporting. Still it was a complete re-architecture of our CSS and it took us 1.5 years to complete the project, including the product migration. That’s way longer that anyone could estimate originally.",
           "As for me personally, I spend a lot of time working on accessibility and it’s very challenging to handle all the small behavior edge cases. For example, I’m working on the menus and when you navigate to the menu through keyboard – where should the focus go? It’s easy to understand that in a Storybook environment but the moment I start integrating it with the product – I see so many edge cases and places where something is already built on top of the current menu implementation.",
           "That’s a general tricky part of maintaining a library for a long time, when your first implementation wasn’t perfect, so people start building on top of existing bugs and they suddenly become features. And when you try fixing those bugs, your fix becomes a breaking change.",
         ],

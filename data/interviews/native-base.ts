@@ -13,7 +13,7 @@ const data: Interview = {
     name: "Sanket Sahu",
     photoUrl: "/img/interviews/native-base/avatar.png",
     bio: `
-    Sanket has co-created universal React & React Native UI library called NativeBase which has over 18,000 Github stars and over 60,000 projects depending on it.
+    Sanket has co-created universal React & React Native UI library called NativeBase which has over 18,000 GitHub stars and over 60,000 projects depending on it.
     He has co-created React Native Aria and built a design tool called BuilderX that generates React & React Native code.
     Following the passion of bringing design and code closer, he currently works on a tool that helps brands build and document their design systems which can be consumed by both developers and designers.
     `,
