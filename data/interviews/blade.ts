@@ -56,7 +56,7 @@ const data: Interview = {
         question:
           "I wonder how many people you currently have on the team and how large is the overall community size you have to support?",
         answer: [
-          "Our current team size is 9 people with 3 engineers working on the infrastructure, 4 engineers working on the design system, 1 full-time designer, and 1 part-time motion designer, and finally managed by an engineering manager. With this composition, we support a community of around 85 front-end developers and 80 designers.",
+          "Our current team size is 9 people with 3 engineers working on the infrastructure, 4 engineers working on the design system, 1 full-time designer, and 1 part-time motion designer, and finally managed by an engineering manager. With this composition, we support a community of around 100 front-end developers and 80 designers.",
           "One of the things I like about our team is that we have different people with different expertise and on top of that one of the designers used to be a developer in the past, which definitely helps in making mutual decisions between the areas of expertise. We’ve also built a habit of coming up with the changes by filling out a template outlining the main details. Then, after that, we have a brainstorming session to see if that makes sense in design and dig deeper into implementation approaches and how they will be consumed by the design and development communities.",
           "Doing this work together, we’re avoiding working in silos, which means we can also plan our work ahead. For example, we know that if designers are working on specific components now, we’ll be able to pick them up next quarter without blocking each other.",
         ],
@@ -151,14 +151,14 @@ const data: Interview = {
         answer: [
           "I think I can name 2 things, and one of them is under communication. Usually, product teams are not involved much in the design system development, which means they will miss the full context, and it will be harder to convince them. And that becomes crucial on your journey to the first released component. For example, when I was working on an input field, it took me 2 days to create the API proposal draft, but it extended to 4 days just because there are so many things you have to handle.",
           "We’re not trying to make everyone experts in the design system since we’re addressing this problem space for them. But, still, we should also make products aware that everything we’re releasing – they won’t be getting for free otherwise. And that’s where we want to translate it to a story and get a narrative of the design system's significance.",
-          "And then the second thing is how we’ve started working with a federated team model since we first primarily focused on the app components. So whenever someone needed the same component for the web, we would encourage everyone to contribute. However, that resulted in some components having two different API implementations, and some global features like state management had to be reimplemented. That’s why when we turned into a central team, we took a step back to resolve all the foundational challenges we initially didn’t have time to address. We focused on the components only after that foundational part was solved properly.",
+          "And then the second thing is how we’ve started working with a federated team model since we first primarily focused on the app components. So whenever someone needed the same component for the web, we would encourage everyone to contribute. However, that resulted in some components having two different API implementations, and some global features like state management had to be reimplemented. That’s why when we turned into a central team, we took a step back to resolve all the foundational challenges we initially didn’t have time to address. We focused on the components only after the foundational part was solved properly.",
         ],
       },
       {
         question:
           "Based on all your experience, what would you recommend for the teams just starting with their design systems?",
         answer: [
-          "Start by talking to others to gather a list of their problems instead of assuming you know what to build yourselves. That should be your phase 0 when you’re just starting since you need to scope and prioritize topics really well. Do they need animation support? Do they need theming? There are dozens of topics you can be solving for yourself just because others are doing that and still solve no problems for the product.",
+          "Start by talking to others to gather a list of their problems instead of assuming you know what to build yourselves. That should be your phase 0 when you’re just starting since you need to scope and prioritize topics really well. Do they need animation support? Do they need theming? There are dozens of topics you can be solving for yourself just because others are doing that and still solve no problems for the product so talking to people and gathering the problems on ground helps to define scope.",
         ],
       },
     ],
