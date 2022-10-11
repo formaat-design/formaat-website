@@ -1,7 +1,7 @@
 import type { Interview } from "../../types/global.types";
 
 const data: Interview = {
-  id: "primer",
+  id: "github",
   company: {
     name: "GitHub",
     // Embedded logo to keep its color inherit color mode colors
@@ -19,7 +19,7 @@ const data: Interview = {
   },
   interviewee: {
     name: "Siddharth Kshetrapal",
-    photoUrl: "/img/interviews/primer/avatar.png",
+    photoUrl: "/img/interviews/github/avatar.png",
     bio: "Sid is a software engineer working on design systems at GitHub. In the past, he worked on UI and Design Systems at CodeSandbox, Auth0 and Practo. He’s the author of packages like ui-devtools, bundlesize and react-ui. He loves talking about design, performance and open source.",
     links: [
       {

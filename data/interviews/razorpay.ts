@@ -1,14 +1,17 @@
 import type { Interview } from "../../types/global.types";
 
 const data: Interview = {
-  id: "blade",
+  id: "razorpay",
+  system: {
+    name: "Blade",
+  },
   company: {
     name: "Razorpay",
-    logoUrl: "/img/interviews/blade/logo.svg",
+    logoUrl: "/img/interviews/razorpay/logo.svg",
   },
   interviewee: {
     name: "Kamlesh Chandnani",
-    photoUrl: "/img/interviews/blade/avatar.png",
+    photoUrl: "/img/interviews/razorpay/avatar.png",
     bio: "Kamlesh is a Principal Frontend Engineer at Razorpay, working on their Design System and Frontend Infrastructure. Recently he has developed a fascination for interior designing and has a zest for home decor.",
     links: [
       {
