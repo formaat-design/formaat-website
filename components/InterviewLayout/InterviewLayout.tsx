@@ -110,7 +110,7 @@ const InterviewLayout = (props: T.Props) => {
                     size={7}
                     className={s.avatar}
                   />
-                  {item.question}
+                  <span dangerouslySetInnerHTML={{ __html: item.question }} />
                 </Text>
                 <Text
                   variant="body-1"
