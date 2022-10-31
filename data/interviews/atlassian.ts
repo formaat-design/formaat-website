@@ -17,7 +17,7 @@ const data: Interview = {
       },
       {
         label: "@jenniesyip",
-        href: "https://twitter.com/JackMcCloy",
+        href: "https://twitter.com/jenniesyip",
       },
     ],
   },
