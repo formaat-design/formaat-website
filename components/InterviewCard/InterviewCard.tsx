@@ -19,23 +19,32 @@ const InterviewCard = (props: T.Props) => {
                   }}
                 />
               ) : null}
-              {data.company?.logoUrl ? (
-                <Image
-                  alt={`${data.company.name} logotype`}
-                  src={data.company.logoUrl}
-                  width="24px"
-                  height="24px"
-                />
-              ) : null}
+              <Image
+                alt={
+                  data.company?.name
+                    ? `${data.company.name} logotype`
+                    : `${data.interviewee.name} avatar`
+                }
+                src={data.company?.logoUrl || data.interviewee.photoUrl}
+                width="24px"
+                height="24px"
+                borderRadius="small"
+              />
               <Stack.Item grow>
                 <Text variant="body-medium-2">
-                  {[data?.system?.name, data.company?.name]
-                    .filter(Boolean)
-                    .join(", ")}
-                  &nbsp;—&nbsp;
-                  <Text variant="body-2" color="neutral-faded" as="span">
-                    {data.interviewee.name}
-                  </Text>
+                  {data.system?.name || data.company?.name ? (
+                    <>
+                      {[data.system?.name, data.company?.name]
+                        .filter(Boolean)
+                        .join(", ")}
+                      &nbsp;—&nbsp;
+                      <Text variant="body-2" color="neutral-faded" as="span">
+                        {data.interviewee.name}
+                      </Text>
+                    </>
+                  ) : (
+                    data.interviewee.name
+                  )}
                 </Text>
                 <Text color="neutral-faded" variant="body-2">
                   {date.toLocaleDateString("en-US", {
