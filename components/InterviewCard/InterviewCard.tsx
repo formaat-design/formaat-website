@@ -11,7 +11,14 @@ const InterviewCard = (props: T.Props) => {
       <NextLink href={`/interviews/${data.id}`} passHref>
         <MenuItem roundedCorners>
           <Stack gap={2}>
-            <Stack direction="row" align="center" gap={3}>
+            <Stack direction="row" align="center" gap={2}>
+              <Image
+                alt={`${data.interviewee.name} avatar`}
+                src={data.interviewee.photoUrl}
+                width="24px"
+                height="24px"
+                borderRadius="small"
+              />
               {data.company?.logo ? (
                 <div
                   dangerouslySetInnerHTML={{
@@ -19,23 +26,30 @@ const InterviewCard = (props: T.Props) => {
                   }}
                 />
               ) : null}
-              {data.company?.logoUrl ? (
+              {data.company?.logoUrl && (
                 <Image
                   alt={`${data.company.name} logotype`}
-                  src={data.company.logoUrl}
+                  src={data.company?.logoUrl}
                   width="24px"
                   height="24px"
+                  borderRadius="small"
                 />
-              ) : null}
-              <Stack.Item grow>
+              )}
+              <Stack.Item grow gap={3}>
                 <Text variant="body-medium-2">
-                  {[data?.system?.name, data.company?.name]
-                    .filter(Boolean)
-                    .join(", ")}
-                  &nbsp;—&nbsp;
-                  <Text variant="body-2" color="neutral-faded" as="span">
-                    {data.interviewee.name}
-                  </Text>
+                  {data.system?.name || data.company?.name ? (
+                    <>
+                      {[data.system?.name, data.company?.name]
+                        .filter(Boolean)
+                        .join(", ")}
+                      &nbsp;—&nbsp;
+                      <Text variant="body-2" color="neutral-faded" as="span">
+                        {data.interviewee.name}
+                      </Text>
+                    </>
+                  ) : (
+                    data.interviewee.name
+                  )}
                 </Text>
                 <Text color="neutral-faded" variant="body-2">
                   {date.toLocaleDateString("en-US", {
