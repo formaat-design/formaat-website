@@ -11,7 +11,14 @@ const InterviewCard = (props: T.Props) => {
       <NextLink href={`/interviews/${data.id}`} passHref>
         <MenuItem roundedCorners>
           <Stack gap={2}>
-            <Stack direction="row" align="center" gap={3}>
+            <Stack direction="row" align="center" gap={2}>
+              <Image
+                alt={`${data.interviewee.name} avatar`}
+                src={data.interviewee.photoUrl}
+                width="24px"
+                height="24px"
+                borderRadius="small"
+              />
               {data.company?.logo ? (
                 <div
                   dangerouslySetInnerHTML={{
@@ -19,18 +26,16 @@ const InterviewCard = (props: T.Props) => {
                   }}
                 />
               ) : null}
-              <Image
-                alt={
-                  data.company?.name
-                    ? `${data.company.name} logotype`
-                    : `${data.interviewee.name} avatar`
-                }
-                src={data.company?.logoUrl || data.interviewee.photoUrl}
-                width="24px"
-                height="24px"
-                borderRadius="small"
-              />
-              <Stack.Item grow>
+              {data.company?.logoUrl && (
+                <Image
+                  alt={`${data.company.name} logotype`}
+                  src={data.company?.logoUrl}
+                  width="24px"
+                  height="24px"
+                  borderRadius="small"
+                />
+              )}
+              <Stack.Item grow gap={3}>
                 <Text variant="body-medium-2">
                   {data.system?.name || data.company?.name ? (
                     <>

@@ -12,8 +12,16 @@ const data: Interview = {
         href: "https://danmall.com",
       },
       {
-        label: "@danmall",
+        label: "Twitter",
         href: "https://twitter.com/danmall",
+      },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/danmallteaches/",
+      },
+      {
+        label: "YouTube",
+        href: "https://www.youtube.com/c/danmallteaches",
       },
     ],
   },
