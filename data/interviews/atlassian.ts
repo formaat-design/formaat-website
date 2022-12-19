@@ -2,6 +2,9 @@ import type { Interview } from "../../types/global.types";
 
 const data: Interview = {
   id: "atlassian",
+  meta: {
+    preview: "/img/interviews/atlassian/social.png",
+  },
   company: {
     name: "Atlassian Design System",
     logoUrl: "/img/interviews/atlassian/logo.svg",

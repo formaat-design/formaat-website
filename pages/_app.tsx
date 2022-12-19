@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import ReactGA from "react-ga4";
 import { Reshaped, Container, Stack } from "reshaped";
+import Meta from "../components/Meta";
 import Header from "../components/Header";
 import "../themes/formaat/theme.css";
 import "../themes/fragments/prose/theme.css";
@@ -33,15 +34,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="image" content="https://formaat.design/img/share.png" />
-        <meta
-          name="twitter:image"
-          content="https://formaat.design/img/share.png"
-        />
-        <meta
-          property="og:image"
-          content="https://formaat.design/img/share.png"
-        />
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -50,22 +42,11 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:url" content="https://formaat.design" />
         <meta property="og:type" content="website" />
 
-        <title key="title">{title}</title>
-        <meta name="twitter:title" content={title} />
-        <meta property="og:title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
         <meta name="twitter:description" content={description} />
-        <meta name="image" content="https://formaat.design/img/share.png" />
-        <meta
-          name="twitter:image"
-          content="https://formaat.design/img/share.png"
-        />
-        <meta
-          property="og:image"
-          content="https://formaat.design/img/share.png"
-        />
       </Head>
+      <Meta />
 
       <Reshaped theme="formaat" defaultColorMode="dark">
         <Header />

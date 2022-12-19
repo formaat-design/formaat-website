@@ -1,5 +1,6 @@
 import React from "react";
 import { GetStaticProps, NextPage } from "next";
+import Meta from "../../components/Meta";
 import InterviewLayout from "../../components/InterviewLayout";
 import {
   getInterview,
@@ -12,15 +13,20 @@ const Route: NextPage<{
   interview: G.Interview;
   suggestedInterviews: G.Interview[];
 }> = (props) => {
-  if (!props.interview) {
-    return null;
-  }
+  const { interview, suggestedInterviews } = props;
+  if (!interview) return null;
+  const metaTitle = [interview.interviewee.name, interview.company?.name]
+    .filter(Boolean)
+    .join(", ");
 
   return (
-    <InterviewLayout
-      data={props.interview}
-      suggestedData={props.suggestedInterviews}
-    />
+    <>
+      <Meta
+        img={interview.meta?.preview}
+        title={`${metaTitle} - Design System Interviews`}
+      />
+      <InterviewLayout data={interview} suggestedData={suggestedInterviews} />
+    </>
   );
 };
 

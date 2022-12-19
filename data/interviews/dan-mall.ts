@@ -2,6 +2,9 @@ import type { Interview } from "../../types/global.types";
 
 const data: Interview = {
   id: "dan-mall",
+  meta: {
+    preview: "/img/interviews/dan-mall/social.png",
+  },
   interviewee: {
     name: "Dan Mall",
     photoUrl: "/img/interviews/dan-mall/avatar.png",

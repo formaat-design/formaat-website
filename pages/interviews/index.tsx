@@ -1,6 +1,7 @@
 import React from "react";
 import type { NextPage, GetStaticProps } from "next";
 import { Text, Stack, Frame } from "reshaped";
+import Meta from "../../components/Meta";
 import InterviewCard from "../../components/InterviewCard";
 import Founders from "../../components/Founders";
 import { getInterviews } from "../../utilities/data";
@@ -16,6 +17,7 @@ const Interviews: NextPage<{ data: G.Interview[] }> = (props) => {
 
   return (
     <>
+      <Meta title="Design System Interviews" />
       <Frame maxWidth="720px" padding={[30, 0]}>
         <Stack gap={3}>
           <Text variant="display-3">Design system interviews</Text>

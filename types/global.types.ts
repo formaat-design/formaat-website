@@ -1,5 +1,8 @@
 export type Interview = {
   id: string;
+  meta?: {
+    preview?: string;
+  };
   company?: {
     name: string;
     logo?: string;
