@@ -6,6 +6,9 @@ const Meta = (props: T.Props) => {
   const { title, img } = props;
 
   let resolvedTitle;
+  const imgUrl = `https://formaat.design${
+    img || "https://formaat.design/img/share.png"
+  }`;
 
   if (!title) {
     resolvedTitle = "Formaat - Design system studio";
@@ -15,21 +18,9 @@ const Meta = (props: T.Props) => {
 
   return (
     <Head>
-      <meta
-        key="image"
-        name="image"
-        content={img || "https://formaat.design/img/share.png"}
-      />
-      <meta
-        key="twitter:image"
-        name="twitter:image"
-        content={img || "https://formaat.design/img/share.png"}
-      />
-      <meta
-        key="og:image"
-        property="og:image"
-        content={img || "https://formaat.design/img/share.png"}
-      />
+      <meta key="image" name="image" content={imgUrl} />
+      <meta key="twitter:image" name="twitter:image" content={imgUrl} />
+      <meta key="og:image" property="og:image" content={imgUrl} />
 
       <title key="title">{resolvedTitle}</title>
       <meta key="twitter:title" name="twitter:title" content={resolvedTitle} />
