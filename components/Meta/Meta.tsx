@@ -6,9 +6,7 @@ const Meta = (props: T.Props) => {
   const { title, img } = props;
 
   let resolvedTitle;
-  const imgUrl = `https://formaat.design${
-    img || "https://formaat.design/img/share.png"
-  }`;
+  const imgUrl = `https://formaat.design${img || "/img/share.png"}`;
 
   if (!title) {
     resolvedTitle = "Formaat - Design system studio";
