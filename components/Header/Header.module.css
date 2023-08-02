@@ -1,0 +1,8 @@
+.root {
+  background: linear-gradient(
+    var(--rs-color-background-page-faded),
+    rgba(var(--rs-color-rgb-background-page-faded), 50%) 70%,
+    rgba(var(--rs-color-rgb-background-page-faded), 0%) 100%
+  );
+  padding-bottom: var(--rs-unit-x6);
+}

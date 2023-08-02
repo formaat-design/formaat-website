@@ -7,25 +7,20 @@
     "build": "next build",
     "build:theme": "reshaped theming --output themes",
     "start": "next start",
-    "lint": "next lint",
-    "start:prod": "pm2 start --name formaat-website 'yarn start'",
-    "stop:prod": "pm2 delete formaat-website",
-    "restart:prod": "pm2 restart formaat-website",
-    "deploy": "git pull && yarn && yarn build && yarn restart:prod"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.2.5",
+    "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-ga4": "1.4.1",
-    "reshaped": "./vendor/reshaped-v1.4.0-beta.tgz"
+    "reshaped": "2.1.0",
+    "@vercel/analytics": "1.0.1"
   },
   "devDependencies": {
-    "@types/node": "18.7.14",
-    "@types/react": "18.0.18",
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
-    "next-transpile-modules": "9.0.0",
-    "typescript": "4.8.2"
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.18",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "typescript": "5.1.6"
   }
 }

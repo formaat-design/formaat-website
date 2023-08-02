@@ -1,19 +1,17 @@
 import React from "react";
 import {
-  Stack,
+  View,
   Avatar,
   Text,
   Button,
-  Frame,
   Divider,
   Icon,
   Image,
-  ThemeProvider,
+  Container,
 } from "reshaped";
 import IconExternal from "../../icons/External";
 import IconLightbulb from "../../icons/Lightbulb";
 import InterviewCard from "../InterviewCard";
-import ProjectList from "../ProjectList";
 import * as T from "./InterviewLayout.types";
 import s from "./InterviewLayout.module.css";
 
@@ -22,45 +20,45 @@ const InterviewLayout = (props: T.Props) => {
   const date = new Date(data.interview.date);
 
   return (
-    <Frame padding={{ s: [15, 0], l: [20, 0] }}>
-      <Stack gap={15}>
-        <Stack
+    <Container width="800px" padding={0}>
+      <View gap={15}>
+        <View
           direction={{ s: "column", m: "row" }}
           gap={{ s: 6, l: 10 }}
           align="start"
           className={s.wrapper}
         >
-          <Stack.Item size={{ s: 12, l: 8 }}>
-            <Stack gap={2}>
+          <View.Item columns={{ s: 12, l: 8 }}>
+            <View gap={2} align="start">
               <Avatar
                 src={data.interviewee.photoUrl}
                 size={18}
                 className={s.avatar}
               />
-              <Text variant="title-1">{data.interviewee.name}</Text>
-              <Text variant="body-1" color="neutral-faded">
+              <Text variant="title-6">{data.interviewee.name}</Text>
+              <Text variant="body-2" color="neutral-faded">
                 {data.interviewee.bio}
               </Text>
-              <Stack.Item gap={6}>
-                <Stack gap={2} direction="row">
+              <View.Item gapBefore={6}>
+                <View gap={2} direction="row">
                   {data.interviewee?.links?.map((link) => (
                     <Button
                       key={link.href}
                       href={link.href}
                       attributes={{ target: "_blank" }}
-                      variant="outline"
+                      variant="faded"
                       endIcon={IconExternal}
                     >
                       {link.label}
                     </Button>
                   ))}
-                </Stack>
-              </Stack.Item>
-            </Stack>
-          </Stack.Item>
-          <Stack.Item size={{ s: 12, l: 4 }}>
-            <Stack gap={0} align={{ s: "start", l: "end" }}>
-              <Stack
+                </View>
+              </View.Item>
+            </View>
+          </View.Item>
+          <View.Item columns={{ s: 12, l: 4 }}>
+            <View gap={0} align={{ s: "start", l: "end" }}>
+              <View
                 direction={{ s: "row-reverse", l: "row" }}
                 align="center"
                 gap={2}
@@ -76,16 +74,16 @@ const InterviewLayout = (props: T.Props) => {
                   <Image
                     alt={`${data.company.name} logotype`}
                     src={data.company.logoUrl}
-                    width="24px"
-                    height="24px"
+                    width={6}
+                    height={6}
                   />
                 ) : null}
-                <Text variant="body-medium-1">
+                <Text variant="body-2" weight="medium">
                   {[data?.system?.name, data.company?.name]
                     .filter(Boolean)
                     .join(", ")}
                 </Text>
-              </Stack>
+              </View>
 
               <Text variant="caption-1" color="neutral-faded">
                 {date.toLocaleDateString("en-US", {
@@ -94,84 +92,90 @@ const InterviewLayout = (props: T.Props) => {
                   year: "numeric",
                 })}
               </Text>
-            </Stack>
-          </Stack.Item>
-        </Stack>
+            </View>
+          </View.Item>
+        </View>
 
         <Divider />
 
-        <ThemeProvider theme="prose">
-          <Stack gap={15}>
-            {data.interview.items.map((item) => (
-              <Stack gap={5} key={item.question}>
-                <Text variant="body-medium-1" className={s.wrapper}>
-                  <Avatar
-                    src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
-                    size={7}
-                    className={s.avatar}
-                  />
-                  <span dangerouslySetInnerHTML={{ __html: item.question }} />
-                </Text>
-                <Text
-                  variant="body-1"
-                  color="neutral-faded"
-                  className={s.wrapper}
-                >
-                  <Avatar
-                    src={data.interviewee.photoUrl}
-                    size={7}
-                    className={s.avatar}
-                  />
-                  <Stack as="span">
-                    {Array.isArray(item.answer)
-                      ? item.answer.map((item) => (
-                          <Stack.Item as="p" key={item}>
-                            <span dangerouslySetInnerHTML={{ __html: item }} />
-                          </Stack.Item>
-                        ))
-                      : item.answer}
-                  </Stack>
-                </Text>
-              </Stack>
-            ))}
-          </Stack>
-        </ThemeProvider>
+        <View gap={15}>
+          {data.interview.items.map((item) => (
+            <View gap={5} key={item.question}>
+              <Text
+                variant={{ s: "body-2", m: "body-1" }}
+                weight="medium"
+                className={s.wrapper}
+              >
+                <Avatar
+                  src="https://pbs.twimg.com/profile_images/1096029593335676929/OZbE9ZXV_400x400.png"
+                  size={6}
+                  className={s.avatar}
+                />
+                <span dangerouslySetInnerHTML={{ __html: item.question }} />
+              </Text>
+              <Text
+                variant={{ s: "body-2", m: "body-1" }}
+                color="neutral-faded"
+                className={s.wrapper}
+              >
+                <Avatar
+                  src={data.interviewee.photoUrl}
+                  size={6}
+                  className={s.avatar}
+                />
+                <View as="span" gap={4}>
+                  {Array.isArray(item.answer)
+                    ? item.answer.map((item) => (
+                        <View.Item as="p" key={item}>
+                          <span dangerouslySetInnerHTML={{ __html: item }} />
+                        </View.Item>
+                      ))
+                    : item.answer}
+                </View>
+              </Text>
+            </View>
+          ))}
+        </View>
 
         <Divider />
 
-        <Stack gap={6}>
-          <Text variant="title-3">Highlights</Text>
+        <View gap={6}>
+          <Text variant={{ s: "body-1", m: "featured-3" }} weight="bold">
+            Highlights
+          </Text>
 
           {data.interview.highlights.map((item) => (
-            <Stack gap={3} direction="row" key={item}>
+            <View gap={3} direction="row" key={item}>
               <Icon svg={IconLightbulb} size={5} color="primary" />
-              <Stack.Item grow>
-                <Text variant="body-1" color="neutral-faded">
+              <View.Item grow>
+                <Text variant="body-2" color="neutral-faded">
                   {item}
                 </Text>
-              </Stack.Item>
-            </Stack>
+              </View.Item>
+            </View>
           ))}
-        </Stack>
+        </View>
 
-        <Stack gap={4}>
-          <Text variant="title-3">More interviews</Text>
+        <View gap={4}>
+          <Text variant={{ s: "body-1", m: "featured-3" }} weight="bold">
+            More interviews
+          </Text>
 
-          <Stack direction="row" align="stretch" gap={{ s: 4, m: 10 }}>
+          <View
+            direction={{ s: "column", m: "row" }}
+            align="stretch"
+            gap={{ s: 4, m: 10 }}
+            divided
+          >
             {suggestedData.map((itemData) => (
-              <Stack.Item size={{ s: 12, m: 6 }} key={itemData.id}>
+              <View.Item columns={{ s: 12, m: 6 }} key={itemData.id}>
                 <InterviewCard data={itemData} />
-              </Stack.Item>
+              </View.Item>
             ))}
-          </Stack>
-        </Stack>
-
-        <Stack gap={6}>
-          <Text variant="title-3">Other Formaat projects</Text>
-          <ProjectList />
-        </Stack>
-      </Stack>
-    </Frame>
+          </View>
+        </View>
+      </View>
+    </Container>
   );
 };
 

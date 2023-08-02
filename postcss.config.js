@@ -1,3 +1,2 @@
-const postcss = require("reshaped/postcss");
-
-module.exports = postcss.config;
+const { config } = require("reshaped/config/postcss");
+module.exports = config;

@@ -8,7 +8,7 @@
 
 @media (--rs-viewport-l) {
   .avatar {
-    position: absolute;
+    position: absolute !important;
     left: calc(var(--rs-unit-x4) * -1);
     transform: translateX(-100%);
   }

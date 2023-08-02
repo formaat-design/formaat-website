@@ -13,30 +13,6 @@ const config = {
       },
     },
   },
-  themeFragments: {
-    prose: {
-      font: {
-        bodyStrong1: {
-          fontSize: { px: 18 },
-          lineHeight: { px: 28 },
-          fontWeightToken: "bold",
-          fontFamilyToken: "body",
-        },
-        bodyMedium1: {
-          fontSize: { px: 18 },
-          lineHeight: { px: 28 },
-          fontWeightToken: "medium",
-          fontFamilyToken: "body",
-        },
-        body1: {
-          fontSize: { px: 18 },
-          lineHeight: { px: 28 },
-          fontWeightToken: "regular",
-          fontFamilyToken: "body",
-        },
-      },
-    },
-  },
 };
 
 module.exports = config;
