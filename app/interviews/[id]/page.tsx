@@ -43,13 +43,3 @@ export default async function Page({ params }: { params: { id: string } }) {
     </>
   );
 }
-
-export const getStaticPaths = async () => {
-  const ids = getInterviewIds();
-  const paths = ids.map((id) => ({ params: { id } }));
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
-};
