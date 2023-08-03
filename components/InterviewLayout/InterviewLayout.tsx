@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   View,
@@ -18,6 +20,8 @@ import s from "./InterviewLayout.module.css";
 const InterviewLayout = (props: T.Props) => {
   const { data, suggestedData } = props;
   const date = new Date(data.interview.date);
+
+  React.useEffect(() => window.document.scrollingElement?.scrollTo(0, 0), []);
 
   return (
     <Container width="800px" padding={0}>

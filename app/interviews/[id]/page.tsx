@@ -1,11 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import InterviewLayout from "../../../components/InterviewLayout";
-import {
-  getInterview,
-  getSuggestedInterviews,
-  getInterviewIds,
-} from "../../../utilities/data";
+import { getInterview, getSuggestedInterviews } from "../../../utilities/data";
 import Header from "../../../components/Header";
 
 export const generateMetadata = async ({
