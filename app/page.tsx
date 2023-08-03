@@ -30,7 +30,7 @@ export default async function Page() {
         >
           <View maxWidth="300px">
             <View.Item>
-              <Text variant="body-2" weight="medium" as="span">
+              <Text variant="body-2" weight="bold" as="span">
                 We are a tiny design system studio based&nbsp;in&nbsp;Amsterdam.
               </Text>
               &nbsp;
@@ -46,7 +46,7 @@ export default async function Page() {
         </View>
         <View gap={{ s: 2, m: 8 }} grow>
           <View.Item>
-            <Text variant="body-2" weight="medium" as="span">
+            <Text variant="body-2" weight="bold" as="span">
               Made by us.
             </Text>
             &nbsp;
@@ -72,7 +72,7 @@ export default async function Page() {
                   </Card>
                 }
               >
-                <Text variant="body-3" weight="medium">
+                <Text variant="body-3" weight="bold">
                   Reshaped design system
                 </Text>
                 <Text variant="body-3" weight="regular" color="neutral-faded">

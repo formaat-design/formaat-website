@@ -1,11 +1,11 @@
 "use client";
 
 import { Reshaped, Container, View } from "reshaped";
-import "../../themes/formaat/theme.css";
+import "reshaped/themes/reshaped/theme.css";
 
 const App = (props: React.PropsWithChildren) => {
   return (
-    <Reshaped theme="formaat" defaultColorMode="dark">
+    <Reshaped theme="reshaped" defaultColorMode="dark">
       <View
         paddingBlock={{ s: 20, l: 10, xl: 30 }}
         paddingInline={{ s: 4, l: 10, xl: 30 }}

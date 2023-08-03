@@ -107,7 +107,7 @@ const InterviewLayout = (props: T.Props) => {
             <View gap={5} key={item.question}>
               <Text
                 variant={{ s: "body-2", m: "body-1" }}
-                weight="medium"
+                weight="bold"
                 className={s.wrapper}
               >
                 <Avatar
