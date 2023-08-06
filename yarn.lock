@@ -2518,10 +2518,10 @@ regexp.prototype.flags@^1.5.0:
     define-properties "^1.2.0"
     functions-have-names "^1.2.3"
 
-reshaped@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/reshaped/-/reshaped-2.1.0.tgz#d839ac20cdff04eba01129d4f290bad50a9d30a5"
-  integrity sha512-mMuytPFOn8mcuatxjXAnN85wGHm3GN+OP6fi7FTFw2+QTCbNxlnTLTbb8gOWyVSEK+BcBkuAe65FjBUqIOd1BQ==
+reshaped@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/reshaped/-/reshaped-2.2.0.tgz#3d7f638620550ab21ad6e6c6775824dcfe0a9116"
+  integrity sha512-5uMMlGULkbm2Js9ZgruBQByYquVQvbGHOvQkID6O2CjAHj/Zt97CNIo/Y9PGi0IqZy3aus6KZ4yvl9p5TJdBlw==
   dependencies:
     autoprefixer "10.4.14"
     chalk "4.1.2"
